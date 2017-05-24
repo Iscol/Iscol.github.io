@@ -3,9 +3,9 @@
   <entry>
     <title><![CDATA[我的第一篇博客]]></title>
     <url>%2F2017%2F05%2F24%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[这是我的第一篇博客.]]></content>
+    <content type="text"><![CDATA[这是我在Github上第一次搭建博客.遇到了很多的困难也得到了很多的帮助,如果你也想搭建一个这样的博客,不妨参考下这个帮助:https://fzy-line.github.io/ 如果你遇到了在分类和标签上出现无法加载的情况,请不要着急,在你生成的页面后进入/sourse/tags里加入layout: “tags”. 下面是网站的发布流程:新建博客 $ hexo new “我的第一篇博客”到站点目录下的/source/_posts/目录下可以看到生成了名为：我的第一篇博客.md的文件，这是Markdown格式的文件，可以用sublime text3或者notepad++等编辑器打开，也可以下载一个MarkdownPad来编辑Markdown文件。 编辑博客 Hexo默认新建的文章抬头已有title、date、tags等属性，可能缺乏categories和meta标签，想要指定目录就需要添加categories属性，而meta标签则是为了便于搜索引擎的收录。如下： title: 我的第一篇博客date: 2016-12-02 23:44:20 tags: #文章标签 可以省略tags字段是文章的标签，可以指定标签也可以不指定，如果要指定多个标签需要这样做： tags: [Linux,Http,网络]我们可以添加上categories字段，对博客进行分类管理，然后点击主页左侧菜单的分类就可看到具体的分类。例如： categories: Linux 发布博客 $ hexo clean #清除缓存 网页正常情况下可以忽略此条命令 $ hexo generate #生成静态页面至public目录写好之后可以现在本地预览，确定无误之后再部署到Github上。 $ hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server） $ hexo deploy #将.deploy目录部署到GitHub需要说明的是： 我们博客文章的编写都是Markdown文件，但是发布到github上的其实是html文件，将Markdown转换成html这个工作我们只要输入hexo generate命令即可，hexo会帮我们完成转换。 hexo命令简写形式 hexo n “我的博客” == hexo new “我的博客”hexo g == hexo generatehexo s == hexo serverhexo d == hexo deploy]]></content>
       <categories>
-        <category>开荒</category>
+        <category>Hexo</category>
       </categories>
       <tags>
         <tag>github</tag>
