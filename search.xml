@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于node.js的学习-1]]></title>
+    <url>%2F2017%2F05%2F25%2F%E5%85%B3%E4%BA%8Enode-js%E7%9A%84%E5%AD%A6%E4%B9%A0-1%2F</url>
+    <content type="text"><![CDATA[作为一个刚刚入行的小白,在学习vue.js的这种进阶的知识后发现自己还欠了很多的基础内容.在思考了很久之后我决定补一下这些知识,一步一个坎,总要踩过去.那么又面临一个问题.node.js和html5 一个偏后端一个偏前端该选择哪个呢?我很纠结在思考了一个上午后我觉得我还是需要先学node.js.为什么要学它.我的理由很简单:node.js是一门可以处理后端的技术,这样我就不用学习.net c#一类的了.哈哈…原文地址:https://www.zhihu.com/question/33578075如果有人不懂为什么要学习node.js可以看下上面的链接.视频的学习链接请百度网易云课堂不是打广告计划一个月的时间学习它.那么开始吧~Js组成: 操作浏览器 Ecmascript+BOM+DOM node.js: 操作系统网络等 Ecmascript os file net database相同点:在ECMAScript部分node和js其实是一样的,比如数据类型的定义,语法结构,内置对象等等差异性:顶层对象 js:window node:没有window概念,有global全局对象node:var a=100;console.log(global.a)//undefined//模块化:一个文件就是一个模块,每一个模块都有自己的作用域.//我们使用var来声明一个定义,他并不是全局的,而是属于当前模块下. global.a=200;console.log(a);//100console.log(global.a);//200 在一个模块下定义的变量,其作用域只是当前模块,外部无法调用. 如果想一个模块能够访问另外一个模块中定义的变量,可以: 1.把变量作为global对象的一个属性(不推荐). 2.使用模块对象module:保存提供和当前模块有关的一些信息. console.log(module); Module { id: ‘.’, exports: {}, parent: null, filename: ‘d:\learnnode\4.js’, loaded: false, children: –&gt;加载的模块 [ Module { id: ‘d:\learnnode\5.js’, exports: {}, parent: [Circular], filename: ‘d:\learnnode\5.js’, loaded: true, children: [], paths: [Object] } ], paths: [ ‘d:\learnnode\node_modules’, ‘d:\node_modules’ ] } //在这个module对象,有一个子对象:exports对象,我们可以通过这个对象把//一个模块中的局部变量对象进行提供访问.module.xeports.a=a;var m5= require(‘./5’);//这个方法的返回值,其实就是被加载模块中的module.exports 在模块作用域,还有一个内置的模块对象:exports,他其实就是module.exports. 注意:module.exports=[1,2,3];//expors和module.exports的指向关系会断开,导致exports的输出错误. 在已有的属性进行添加,而不是重写. //_filename:当前文件被解析过后的绝对路径.属于当前模块下的.//模块加载系统:require(‘模块’); eg: require(‘./2.js’); //模块加载机制: 路径 绝对路径:require(‘b:/x/x/2.js’); 相对路径:require(‘./2.js’);//未加./会加载node的核心模块,或者是node_modules require(&apos;./2&apos;)// 1.首先按照加载的模块的文件名称进行查找 2.如果没有找到,则会在模块文件名称后面加上.js的后缀,进行查找. 3.如果还么有找到,则会在文件名称后面加上.json的后缀,进行查找. 4.如果还没有找到,则会在文件名称后面加上.node的后缀,进行查找. 5.还为找到,抛出错误.]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的第一篇博客]]></title>
     <url>%2F2017%2F05%2F24%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[这是我在Github上第一次搭建博客.遇到了很多的困难也得到了很多的帮助,如果你也想搭建一个这样的博客,不妨参考下这个帮助:https://fzy-line.github.io/ 如果你遇到了在分类和标签上出现无法加载的情况,请不要着急,在你生成的页面后进入/sourse/tags里加入layout: “tags”. 下面是网站的发布流程:新建博客 $ hexo new “我的第一篇博客”到站点目录下的/source/_posts/目录下可以看到生成了名为：我的第一篇博客.md的文件，这是Markdown格式的文件，可以用sublime text3或者notepad++等编辑器打开，也可以下载一个MarkdownPad来编辑Markdown文件。 编辑博客 Hexo默认新建的文章抬头已有title、date、tags等属性，可能缺乏categories和meta标签，想要指定目录就需要添加categories属性，而meta标签则是为了便于搜索引擎的收录。如下： title: 我的第一篇博客date: 2016-12-02 23:44:20 tags: #文章标签 可以省略tags字段是文章的标签，可以指定标签也可以不指定，如果要指定多个标签需要这样做： tags: [Linux,Http,网络]我们可以添加上categories字段，对博客进行分类管理，然后点击主页左侧菜单的分类就可看到具体的分类。例如： categories: Linux 发布博客 $ hexo clean #清除缓存 网页正常情况下可以忽略此条命令 $ hexo generate #生成静态页面至public目录写好之后可以现在本地预览，确定无误之后再部署到Github上。 $ hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server） $ hexo deploy #将.deploy目录部署到GitHub需要说明的是： 我们博客文章的编写都是Markdown文件，但是发布到github上的其实是html文件，将Markdown转换成html这个工作我们只要输入hexo generate命令即可，hexo会帮我们完成转换。 hexo命令简写形式 hexo n “我的博客” == hexo new “我的博客”hexo g == hexo generatehexo s == hexo serverhexo d == hexo deploy]]></content>
