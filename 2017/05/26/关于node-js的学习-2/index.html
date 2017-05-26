@@ -3,14 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Kategori: Hexo | Iscol&#39;s Blog</title>
+    <title>关于node.js的学习-2 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Iscol&#39;s Blog">
-<meta property="og:url" content="https://iscol.github.io/categories/Hexo/index.html">
+    <meta name="description" content="小张来打卡了,这是第二天了,忙活了一上午的数据库,总算成功的导入了.现在可以沉下心来接着看了昨天学习了一些基础的知识,主要还是require和exports的机制.今天努努力开始继续学习吧.ready  go!">
+<meta name="keywords" content="node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于node.js的学习-2">
+<meta property="og:url" content="https://iscol.github.io/2017/05/26/关于node-js的学习-2/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
+<meta property="og:description" content="小张来打卡了,这是第二天了,忙活了一上午的数据库,总算成功的导入了.现在可以沉下心来接着看了昨天学习了一些基础的知识,主要还是require和exports的机制.今天努努力开始继续学习吧.ready  go!">
+<meta property="og:updated_time" content="2017-05-26T08:46:35.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iscol&#39;s Blog">
+<meta name="twitter:title" content="关于node.js的学习-2">
+<meta name="twitter:description" content="小张来打卡了,这是第二天了,忙活了一上午的数据库,总算成功的导入了.现在可以沉下心来接着看了昨天学习了一些基础的知识,主要还是require和exports的机制.今天努努力开始继续学习吧.ready  go!">
     
 
     
@@ -205,50 +210,179 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">Hexo</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-关于node-js的学习-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/24/我的第一篇博客/">我的第一篇博客</a>
+        <h1 class="article-title" itemprop="name">
+            关于node.js的学习-2
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/05/24/我的第一篇博客/">
-            <time datetime="2017-05-24T06:06:40.000Z" itemprop="datePublished">2017-05-24</time>
+        <a href="/2017/05/26/关于node-js的学习-2/">
+            <time datetime="2017-05-26T00:35:37.000Z" itemprop="datePublished">2017-05-26</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/github/">github</a>
+        <a class="tag-link" href="/tags/node-js/">node.js</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>小张来打卡了,这是第二天了,忙活了一上午的数据库,总算成功的导入了.<br>现在可以沉下心来接着看了<br>昨天学习了一些基础的知识,主要还是require和exports的机制.<br>今天努努力开始继续学习吧.<br>ready  go!</p>
+<a id="more"></a>
+<p>有点尴尬么 哈哈~<br><a href="http://oqfuveidu.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170526132504.jpg" target="_blank" rel="external">http://oqfuveidu.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170526132504.jpg</a></p>
+<p>/////////////////////////////<br>//console.log(_filename);<br>返回当前模块文件的解析后的绝对路径,该属性其实并非全局的,<br>而是模块作用域下的.<br>//console.log(_dirname);<br>返回当前模块文化部所以在目录解析后的绝对路径,该属性也不是全局的,而是模块作用域下的.<br>效果如下:<br>d:\learnnode\6.js<br>d:\learnnode</p>
+<p>/////////////////////////////</p>
+<p>global:process对象<br>process对象是一个全局对象,可以在任何地方都能访问到,通过这个对象提供的属性和方法,<br>          使我们可以对当前运行的程序的进程进行访问和控制.<br>process.argv:一个包含命令行参数的数组,第一个元素是node,第二个元素是.js文件名称.接下来的元素一次是命令行传入的参数.</p>
+<p>console.log(process.pid);可以进入资源管理器查看PID:任务进程编号</p>
+<p>process.stdin,stdout :标准输入输出流(IO),提供操作输入数据和输出数据的方法</p>
+<p>process.stdin.resume();//默认情况下,输入流是关闭的,要监听处理输入流数据,首先要开启输入流.<br>process.stdin.on(‘data’,function(chunk) {<br>    console.log(‘yonghushuru’+chunk);<br>});<br>//用于监听用户输入数据</p>
+<p>/////////////////////////////</p>
+<p>Buffer类:一个用于 更好操作二进制数据的类(全局类)</p>
+<p>var bf=new Buffer(5);//size[num]创建一个Buffer对象,并未这个对象分配一个大小,当分配空间大小后,其长度固定,无法更改.<br>console.log(bf);//<buffer 00=""><br>var bf=new Buffer([1,2,3]);<br>console.log(bf);//<buffer 01="" 02="" 03=""><br>var bf=new Buffer(‘miaowei’,’utf-8’);//把字符串转成二进制数据,默认utf8<br>console.log(bf);//<buffer 61="" 65="" 69="" 77="" 6d="" 6f=""></buffer></buffer></buffer></p>
+<p>for(var i=0;i&lt;bf.length;i++){   //bf.length指字节长度,而不是字符串长度.而在utf8编码中一个汉字占3个字节,一个字母或者数字占一个字节.<br>    console.log(String.fromCharCode(bf[i]));<br>}//反向输出字符</p>
+<p>buf.write():从指定的字符串当中以指定的编码写入指定长度字符.<br>var str=”miaovvvvvv”;<br>var bf=new Buffer(5);<br>bf.write(str) ;<br>console.log(bf);//<buffer 61="" 69="" 76="" 6d="" 6f=""><br>bf.write(str,1,3) ; 1:偏移量(从对象的第几位开始写入,从0开始),3:指长度.<br>console.log(bf);//<buffer 61="" 69="" 02="" 6d="" 00=""></buffer></buffer></p>
+<p>var bf=new Buffer(‘miaov’);<br>console.log(bf.toString(‘utf-8’,1,3));//ia</p>
+<p>var bf2=new Buffer(‘妙味’);<br>console.log(bf2.toString(‘utf-8’,1));//��味</p>
+<p>console.log(bf2.toJSON());//{ type: ‘Buffer’, data: [ 229, 166, 153, 229, 145, 179 ] }调用字符串序列号这个实例</p>
+<p>slice(2,4);引用相同的内存地址,然后进行切割成新的字节数组buffer.<br>bf.copy(bf4);输出bf4的Buffer值</p>
+<p>今天完结,明天继续.</p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/" data-id="cj35ltaxb0006usg5seg49imw" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://iscol.github.io/2017/05/26/关于node-js的学习-2/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/">Komentar</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/05/25/关于node-js的学习-1/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Lebih Tua</strong>
+            <div class="article-nav-title">关于node.js的学习-1</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -409,11 +543,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'https://iscol.github.io/2017/05/26/关于node-js的学习-2/';
+        
+        this.page.identifier = '关于node-js的学习-2';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
