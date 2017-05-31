@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hello World | Iscol&#39;s Blog</title>
+    <title>关于node.js的学习-5 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="本章开始学习前端项目自动化包括项目构建,自动合并等话不多说 继续开始fs模块介绍http://www.jianshu.com/p/5683c8a93511">
+<meta name="keywords" content="node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://iscol.github.io/2017/05/24/hello-world/index.html">
+<meta property="og:title" content="关于node.js的学习-5">
+<meta property="og:url" content="https://iscol.github.io/2017/05/31/关于node-js的学习-5/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-24T02:38:19.862Z">
+<meta property="og:description" content="本章开始学习前端项目自动化包括项目构建,自动合并等话不多说 继续开始fs模块介绍http://www.jianshu.com/p/5683c8a93511">
+<meta property="og:updated_time" content="2017-05-31T07:51:27.346Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="关于node.js的学习-5">
+<meta name="twitter:description" content="本章开始学习前端项目自动化包括项目构建,自动合并等话不多说 继续开始fs模块介绍http://www.jianshu.com/p/5683c8a93511">
     
 
     
@@ -209,7 +210,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-关于node-js的学习-5" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -217,7 +218,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Hello World
+            关于node.js的学习-5
         </h1>
     
 
@@ -226,14 +227,24 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/05/24/hello-world/">
-            <time datetime="2017-05-24T02:38:19.862Z" itemprop="datePublished">2017-05-24</time>
+        <a href="/2017/05/31/关于node-js的学习-5/">
+            <time datetime="2017-05-31T05:31:05.000Z" itemprop="datePublished">2017-05-31</time>
         </a>
     </div>
 
 
                         
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
+    </div>
+
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/node-js/">node.js</a>
+    </div>
+
                     </div>
                 
             </header>
@@ -242,15 +253,10 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>本章开始学习前端项目自动化<br>包括项目构建,自动合并等<br>话不多说 继续开始<br>fs模块介绍<a href="http://www.jianshu.com/p/5683c8a93511" target="_blank" rel="external">http://www.jianshu.com/p/5683c8a93511</a><br><a id="more"></a><br>PS:{}和[]有啥区别?答案是{}里面是对象,[]则是数组</p>
+<p>/////////////////////////////</p>
+<p>初始化文件项目<br> var projectData={<br>     ‘name’:’miaov’,<br>     ‘fileData’:[<br>         {<br>             ‘name’:’css’,<br>             ‘type’:’dir’<br>         },<br>         {<br>             ‘name’:’js’,<br>             ‘type’:’dir’<br>         },<br>         {<br>             ‘name’:’images’,<br>             ‘type’:’dir’<br>         },<br>         {<br>             ‘name’:’index.html’,<br>             ‘type’:’file’,<br>             ‘content’:’<html>\n\t<head>\n\t\t<title>title</title>\n\t</head>\n\t<body>\n\t\t<h2>hello</h2>\n\t</body>\n</html>‘,<br>         }<br>     ]<br> };<br> if(projectData.name){<br>           fs.mkdirSync(projectData.name);<br>           var fileData=projectData.fileData;<br>     if(fileData &amp;&amp; fileData.forEach){<br>                fileData.forEach(function(f){<br>                    f.path= projectData.name+’/‘+ f.name;<br>                    f.content= f.content || ‘’;<br>                     switch (f.type) {<br>                         case ‘dir’:<br>                               fs.mkdirSync(f.path);<br>                             break;<br>                         case  ‘file’:<br>                             fs.writeFileSync(f.path, f.content);<br>                             break;<br>                     }<br>                })<br>     }<br> }</p>
+<p> /////////////////////////////</p>
 
         
         </div>
@@ -261,7 +267,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/05/24/hello-world/" data-id="cj3cr2h0h0009tgg5r0blrmql" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/05/31/关于node-js的学习-5/" data-id="cj3cr2h0d0006tgg5t5mfmczv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -329,7 +335,7 @@
 
             
     
-        <a href="https://iscol.github.io/2017/05/24/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/05/24/hello-world/">Comments</a>
+        <a href="https://iscol.github.io/2017/05/31/关于node-js的学习-5/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/05/31/关于node-js的学习-5/">Comments</a>
     
 
         </footer>
@@ -338,15 +344,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/05/24/我的第一篇博客/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    我的第一篇博客
-                
-            </div>
-        </a>
     
+        <a href="/2017/05/31/关于node-js的学习-4/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">关于node.js的学习-4</div>
+        </a>
     
 </nav>
 
@@ -545,9 +547,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://iscol.github.io/2017/05/24/hello-world/';
+            this.page.url = 'https://iscol.github.io/2017/05/31/关于node-js的学习-5/';
         
-        this.page.identifier = 'hello-world';
+        this.page.identifier = '关于node-js的学习-5';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

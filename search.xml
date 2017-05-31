@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于node.js的学习-5]]></title>
+    <url>%2F2017%2F05%2F31%2F%E5%85%B3%E4%BA%8Enode-js%E7%9A%84%E5%AD%A6%E4%B9%A0-5%2F</url>
+    <content type="text"><![CDATA[本章开始学习前端项目自动化包括项目构建,自动合并等话不多说 继续开始fs模块介绍http://www.jianshu.com/p/5683c8a93511PS:{}和[]有啥区别?答案是{}里面是对象,[]则是数组 ///////////////////////////// 初始化文件项目 var projectData={ ‘name’:’miaov’, ‘fileData’:[ { ‘name’:’css’, ‘type’:’dir’ }, { ‘name’:’js’, ‘type’:’dir’ }, { ‘name’:’images’, ‘type’:’dir’ }, { ‘name’:’index.html’, ‘type’:’file’, ‘content’:’\n\t\n\t\ttitle\n\t\n\t\n\t\thello\n\t\n‘, } ] }; if(projectData.name){ fs.mkdirSync(projectData.name); var fileData=projectData.fileData; if(fileData &amp;&amp; fileData.forEach){ fileData.forEach(function(f){ f.path= projectData.name+’/‘+ f.name; f.content= f.content || ‘’; switch (f.type) { case ‘dir’: fs.mkdirSync(f.path); break; case ‘file’: fs.writeFileSync(f.path, f.content); break; } }) } } /////////////////////////////]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于node.js的学习-4]]></title>
     <url>%2F2017%2F05%2F31%2F%E5%85%B3%E4%BA%8Enode-js%E7%9A%84%E5%AD%A6%E4%B9%A0-4%2F</url>
-    <content type="text"><![CDATA[生活不易,且行且珍惜.忙活了三天,电脑没碰,生活上的事情焦头烂额,继续吧.上次的学习主要是fs文件模块的使用,包括fs.write,fs.open,fs.read等.日常错误就是对其读写操作属性的配置.下面继续开始下一章. fs.readFile(filename,[options],callback)//异步读取一个文件的全部内容 fs.readFileSync(filename,[options])//同步 fs.unlink(filename,callback)//异步删除一个文件 fs.unlinkSync(path)//同步 fs.rename(‘oldname’,’newname’,callback)//重命名 fs.stat(path.callback)//读取文件信息(属性) { ‘0’: null, ‘1’: Stats { dev: 826654, mode: 33206, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 60517119993054080, size: 17, blocks: undefined, atime: 2017-05-27T08:29:26.420Z, mtime: 2017-05-27T08:45:50.850Z, ctime: 2017-05-27T08:45:50.850Z, birthtime: 2017-05-27T07:51:00.935Z } } fs.watch(filename,[options],[listener])//不稳定,观察指定路径的改版 回调函数里的参数(event,filename)监听内容及命名的变化 (change,rename) ///////////////////////////// 下面是操作文件夹的一些内容fs.mkdir(path,[mode],callback) //创建文件夹fs.mkdir(‘./1’,function(){ console.log(arguments);//0:null})fs.mkdirSync(path,[mode])//同步版本 fs.readdir(path,callback)//读取文件夹fs.readdir(‘../learnnode’,function(err,fileList){ fileList.forEach(function(f){ fs.stat(f,function(err,info){ switch (info.mode){ case 16822: console.log(‘文件夹’+f); break; case 33206: console.log(‘文件’+f); break; default: console.log(f); break; } }) })}) readdir(‘../learnnode’,function(err,fileList){ fileList.forEach(function(f){ fs.stat(f,function(){ console.log(arguments); }) })})输出:{ ‘0’: null, ‘1’: Stats { dev: 826654, mode: 16822, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 3940649674220553, size: 0, blocks: undefined, atime: 2017-05-31T02:35:17.146Z, mtime: 2017-05-31T02:35:17.146Z, ctime: 2017-05-31T02:35:17.146Z, birthtime: 2017-05-31T02:35:17.146Z } }{ ‘0’: null, ‘1’: Stats { dev: 826654, mode: 33206, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 14355223812513196, size: 6, blocks: undefined, atime: 2017-05-27T07:16:26.216Z, mtime: 2017-05-27T07:16:30.209Z, ctime: 2017-05-27T07:16:30.209Z, birthtime: 2017-05-27T06:24:41.427Z } } 注意!mode 33206代表文件,16822代表文件夹fs.readdirSync(path)//同步版本 fs.rmdir(path,callback)//删除文件夹 fs.rmdir(path)//同步版本 /////////////////////////////]]></content>
+    <content type="text"><![CDATA[生活不易,且行且珍惜.忙活了三天,电脑没碰,生活上的事情焦头烂额,继续吧.上次的学习主要是fs文件模块的使用,包括fs.write,fs.open,fs.read等.日常错误就是对其读写操作属性的配置.下面继续开始下一章. fs.readFile(filename,[options],callback)//异步读取一个文件的全部内容 fs.readFileSync(filename,[options])//同步 fs.unlink(filename,callback)//异步删除一个文件 fs.unlinkSync(path)//同步 fs.rename(‘oldname’,’newname’,callback)//重命名 fs.stat(path.callback)//读取文件信息(属性) { ‘0’: null, ‘1’: Stats { dev: 826654, mode: 33206, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 60517119993054080, size: 17, blocks: undefined, atime: 2017-05-27T08:29:26.420Z, mtime: 2017-05-27T08:45:50.850Z, ctime: 2017-05-27T08:45:50.850Z, birthtime: 2017-05-27T07:51:00.935Z } } fs.watch(filename,[options],[listener])//不稳定,观察指定路径的改版 回调函数里的参数(event,filename)监听内容及命名的变化 (change,rename)event 为rename表示指定的文件或目录中有重命名、删除或移动操作或change表示有修改，filename表示发生变化的文件路径///////////////////////////// 下面是操作文件夹的一些内容fs.mkdir(path,[mode],callback) //创建文件夹fs.mkdir(‘./1’,function(){ console.log(arguments);//0:null})fs.mkdirSync(path,[mode])//同步版本 fs.readdir(path,callback)//读取文件夹fs.readdir(‘../learnnode’,function(err,fileList){ fileList.forEach(function(f){ fs.stat(f,function(err,info){ switch (info.mode){ case 16822: console.log(‘文件夹’+f); break; case 33206: console.log(‘文件’+f); break; default: console.log(f); break; } }) })}) readdir(‘../learnnode’,function(err,fileList){ fileList.forEach(function(f){ fs.stat(f,function(){ console.log(arguments); }) })})输出:{ ‘0’: null, ‘1’: Stats { dev: 826654, mode: 16822, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 3940649674220553, size: 0, blocks: undefined, atime: 2017-05-31T02:35:17.146Z, mtime: 2017-05-31T02:35:17.146Z, ctime: 2017-05-31T02:35:17.146Z, birthtime: 2017-05-31T02:35:17.146Z } }{ ‘0’: null, ‘1’: Stats { dev: 826654, mode: 33206, nlink: 1, uid: 0, gid: 0, rdev: 0, blksize: undefined, ino: 14355223812513196, size: 6, blocks: undefined, atime: 2017-05-27T07:16:26.216Z, mtime: 2017-05-27T07:16:30.209Z, ctime: 2017-05-27T07:16:30.209Z, birthtime: 2017-05-27T06:24:41.427Z } } 注意!mode 33206代表文件,16822代表文件夹fs.readdirSync(path)//同步版本 fs.rmdir(path,callback)//删除文件夹 fs.rmdir(path)//同步版本 /////////////////////////////]]></content>
       <categories>
         <category>Node.js</category>
       </categories>
@@ -41,7 +52,7 @@
         <category>Node.js</category>
       </categories>
       <tags>
-        <tag>nodejs</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
