@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/06/01/关于node-js的学习-6/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="程序员不易,坐久了腰好疼啊~继续开始使用node.js进行web开发">
-<meta property="og:updated_time" content="2017-06-01T08:05:44.040Z">
+<meta property="og:updated_time" content="2017-06-02T07:40:50.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node.js的学习-6">
 <meta name="twitter:description" content="程序员不易,坐久了腰好疼啊~继续开始使用node.js进行web开发">
@@ -81,7 +81,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -100,9 +100,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Articles',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
+            CATEGORIES: 'Catégories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -134,7 +134,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
     </div>
 
                 </td>
@@ -154,16 +154,16 @@
             <h2 id="name">张磊</h2>
             <h3 id="title">Web Developer :Vue,HTML5,Jquery</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Qingdao, China</span>
-            <a id="follow" target="_blank" href="https://github.com/Iscol/Iscol.github.io">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/Iscol/Iscol.github.io">SUIVRE</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 9
-                <span>posts</span>
+                <span>Articles</span>
             </div>
             <div class="article-info-block">
                 3
-                <span>tags</span>
+                <span>Tags</span>
             </div>
         </div>
         
@@ -256,7 +256,12 @@
             <p>程序员不易,坐久了腰好疼啊~<br>继续开始<br>使用node.js进行web开发<br><a id="more"></a></p>
 <p><a href="http://www.baidu.com请求后动作" target="_blank" rel="external">http://www.baidu.com请求后动作</a><br>1.浏览器发送http请求,请求指定的baidu.com的主机(DNS解析IP地址)<br>2.该ip地址的设备接受到请求后会对该请求进行分析和处理.<br>3.服务器处理完成后,返回对应的数据到用户浏览器.<br>4.浏览器接受把服务器返回的数据,然后进行分析处理.渲染等操作.</p>
 <p>var http=require(‘http’);<br>//通过http模块下的createserver创建并返回一个web服务器对象.<br>var server=http.createServer();</p>
-<p>//监听端口.端口:网络数据交互如QQ等数据的传输和发送都需要通过网卡,划分好对应的’分机’才能对应监听<br>//一个应用程序可以监听多个端口数据,一个端口数据只能被一个应用监听.<br>//server.listen(port,[hostname],[backlog],[callback])<br>//port:监听端口.<br>// hostname:主机名(Ip/域名).<br>// backlog:连接等待队列的最大长度.(允许多少客户端等待)<br>// callback:调用listen方法并成功开启监听后,<br>//会触发一个listning事件,callback将作为该事件的执行函数.<br>//端口号1-1024 给系统使用,<br>server.on(‘error’,function(err){  //服务开启失败时触发<br>        console.log(err);<br>})<br> server.on(‘listening’,function(){  //调用listen方法时触发<br>     console.log(‘listen’);<br> })<br>server.on(‘request’,function(){    //有客户端发送请求到该主机和端口的请求的时候触发<br>    console.log(‘有请求了’);<br>})<br>server.listen(8089,’localhost’);  //浏览器输入 <a href="http://localhost:8089/" target="_blank" rel="external">http://localhost:8089/</a>  request方法就会有响应.</p>
+<p>//监听端口.端口:网络数据交互如QQ等数据的传输和发送都需要通过网卡,划分好对应的’分机’才能对应监听<br>//一个应用程序可以监听多个端口数据,一个端口数据只能被一个应用监听.<br>//server.listen(port,[hostname],[backlog],[callback])<br>//port:监听端口.<br>// hostname:主机名(Ip/域名).<br>// backlog:连接等待队列的最大长度.(允许多少客户端等待)<br>// callback:调用listen方法并成功开启监听后,<br>//会触发一个listning事件,callback将作为该事件的执行函数.<br>//端口号1-1024 给系统使用,<br>server.on(‘error’,function(err){  //服务开启失败时触发<br>        console.log(err);<br>})<br> server.on(‘listening’,function(){  //调用listen方法时触发<br>     console.log(‘listen’);<br> })<br>server.on(‘request’,function(req,res){    //有客户端发送请求到该主机和端口的请求的时候触发<br>    console.log(‘有请求了’);               //req:存储跟客户端发送请求的相关信息<br>   // console.log(req);                       //res:服务端数据处理,向客户端发送指定的数据<br>    res.write(‘hello’);                      //(chuank,encoding):发送一个数据块到响应正文中,后面是编码方式.<br>    res.end();                               //(chuank,encoding):当所有的正文和头信息发送完成以后会调用该方法告诉<br>                        // 服务器数据已经全部发送完成,这个方法在每次完成信息发送以后必须调用,并且是最后调用.<br>})<br>res.writeHead(200,’dddd’,{                    //浏览器接受到的永远都是字符串,会根据header里的类型进行设置.<br>        ‘content-type’:’text/html’,<br>    }) ;<br>server.listen(8089,’localhost’);  //浏览器输入 <a href="http://localhost:8089/" target="_blank" rel="external">http://localhost:8089/</a>  request方法就会有响应.</p>
+<p>////////////////////////////////////////</p>
+<p>var http=require(‘http’);<br> var url=require(‘url’);<br>var server=http.createServer();<br>(var fs=require(‘fs’);)<br>server.on(‘request’,function(req,res){<br>      var urlStr=url.parse(req.url);<br>      (var htmlDir=_dirname+’/html’;)<br>    console.log(urlStr);//将url解析成一个json对象进行查看.<br>    switch (urlStr.pathname){<br>        case ‘/‘:<br>           ( sendData(htmlDir+’index.html’,req,res))<br>           res.writeHead(200,{                                //可以使用fs模块实现分离<br>               ‘content-type’:’text/html;charset=utf-8’<br>           }) ;<br>             res.end(‘shouye’);<br>            break;<br>        case ‘/user’:<br>            res.writeHead(200,{<br>                ‘content-type’:’text/html;charset=utf-8’<br>            }) ;<br>            res.end(‘geren’);<br>            break;<br>        default:<br>            res.writeHead(200,{<br>                ‘content-type’:’text/html;charset=utf-8’<br>            }) ;<br>            res.end(‘beichidiao’);<br>            break;<br>    }<br>    console.log(req.url);//访问路径; ?后面的部分query string 查询字符串<br>})  ;<br>function sendData(file,req,res){<br>fs.readFile(file,function(err,data){<br>if(err){<br> res.writeHead(200,{<br>               ‘content-type’:’text/html;charset=utf-8’<br>           }) ;<br>             res.end(‘shouye’);<br>}<br>else{<br> res.writeHead(200,{<br>               ‘content-type’:’text/html;charset=utf-8’<br>           }) ;<br>             res.end(‘data’);<br>}<br>})<br>}<br>server.listen(8080,’localhost’);</p>
+<p>log:<br>Url {<br>  protocol: null,<br>  slashes: null,<br>  auth: null,<br>  host: null,<br>  port: null,<br>  hostname: null,<br>  hash: null,<br>  search: ‘?=1’,<br>  query: ‘=1’,<br>  pathname: ‘/a’,<br>  path: ‘/a?=1’,<br>  href: ‘/a?=1’ }<br>/a?=1</p>
+<p>////////////////////////////////////////</p>
+<p>urlStr里有query的值即是提交的表单<br>Query.String: 序列化一个对象到一个query string  可以选择是否覆盖默认的分分割符(‘&amp;’)和分配符(‘=’).<br>也可以自定义 eg:username=ab&amp;password=123<br> Query.parse:反序列化</p>
 
         
         </div>
@@ -267,7 +272,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/" data-id="cj3e6vd4n000dn8g5v2a9lhe3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/" data-id="cj3fjjtaw0000ycg5tu6b7ba8" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -335,7 +340,7 @@
 
             
     
-        <a href="https://iscol.github.io/2017/06/01/关于node-js的学习-6/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/">Comments</a>
+        <a href="https://iscol.github.io/2017/06/01/关于node-js的学习-6/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/">Commentaires</a>
     
 
         </footer>
@@ -345,7 +350,7 @@
 <nav id="article-nav">
     
         <a href="/2017/06/01/网站页面优化/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
+            <strong class="article-nav-caption">Plus récent</strong>
             <div class="article-nav-title">
                 
                     网站页面优化
@@ -355,7 +360,7 @@
     
     
         <a href="/2017/05/31/关于node-js的学习-5/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Plus ancien</strong>
             <div class="article-nav-title">关于node.js的学习-5</div>
         </a>
     
@@ -383,7 +388,7 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Récents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -489,7 +494,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">categories</h3>
+        <h3 class="widget-title">Catégories</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li></ul>
         </div>
@@ -498,7 +503,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
@@ -507,7 +512,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">Tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -516,7 +521,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">Nuage de tags</h3>
         <div class="widget tagcloud">
             <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a> <a href="/tags/网页优化/" style="font-size: 10px;">网页优化</a>
         </div>
@@ -525,7 +530,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Liens</h3>
         <div class="widget">
             <ul>
                 
