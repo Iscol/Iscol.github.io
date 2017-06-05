@@ -282,7 +282,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/" data-id="cj3jgpsa1000bi0g5ng218rcf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/" data-id="cj3jgy9c80004hsg5warysl5s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -350,7 +350,7 @@
 
             
     
-        <a href="https://iscol.github.io/2017/05/26/关于node-js的学习-2/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/">Comments</a>
+        <a href="https://iscol.github.io/2017/05/26/关于node-js的学习-2/#comments" class="article-comment-link">Comments</a>
     
 
         </footer>
@@ -385,10 +385,42 @@
     <section id="comments">
     
         
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    <div id="uyan_frame"></div>
 
+{% include './comments/duoshuo.swig' %}
+{% include './comments/disqus.swig' %}
+{% include './comments/youyan.swig' %}
+{% include './comments/hypercomments.swig' %}
+{% include './comments/gentie.swig' %}
+{% if page.comments %}
+     <div class="comments" id="comments">
+       {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
+         <div class="ds-thread" data-thread-key="{{ page.path }}"
+              data-title="{{ page.title }}" data-url="{{ page.permalink }}">
+         </div>
+       {% elseif theme.facebook_sdk.enable and theme.facebook_comments_plugin.enable %}
+         <div class="fb-comments"
+              data-href="{{ page.permalink }}"
+              data-numposts="{{ theme.facebook_comments_plugin.num_of_posts }}"
+              data-width="{{ theme.facebook_comments_plugin.width }}"
+              data-colorscheme="{{ theme.facebook_comments_plugin.scheme }}">
+         </div>
+       {% elseif theme.disqus_shortname %}
+         <div id="disqus_thread">
+           <noscript>
+             Please enable JavaScript to view the
+             <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+           </noscript>
+         </div>
+       {% elseif theme.hypercomments_id %}
+         <div id="hypercomments_widget"></div>
+       {% elseif theme.gentie_productKey %}
+         <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+       {% elseif theme.youyan_uid %}
+            <div id="uyan_frame"></div>
+       {% endif %}
+     </div>
+   {% endif %}
     
     </section>
 
@@ -568,21 +600,42 @@
 </footer>
         
     
-    <script>
-    var disqus_config = function () {
-        
-            this.page.url = 'https://iscol.github.io/2017/05/26/关于node-js的学习-2/';
-        
-        this.page.identifier = '关于node-js的学习-2';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2135387"></script>
 
+{% include './comments/duoshuo.swig' %}
+{% include './comments/disqus.swig' %}
+{% include './comments/youyan.swig' %}
+{% include './comments/hypercomments.swig' %}
+{% include './comments/gentie.swig' %}
+{% if page.comments %}
+     <div class="comments" id="comments">
+       {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
+         <div class="ds-thread" data-thread-key="{{ page.path }}"
+              data-title="{{ page.title }}" data-url="{{ page.permalink }}">
+         </div>
+       {% elseif theme.facebook_sdk.enable and theme.facebook_comments_plugin.enable %}
+         <div class="fb-comments"
+              data-href="{{ page.permalink }}"
+              data-numposts="{{ theme.facebook_comments_plugin.num_of_posts }}"
+              data-width="{{ theme.facebook_comments_plugin.width }}"
+              data-colorscheme="{{ theme.facebook_comments_plugin.scheme }}">
+         </div>
+       {% elseif theme.disqus_shortname %}
+         <div id="disqus_thread">
+           <noscript>
+             Please enable JavaScript to view the
+             <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+           </noscript>
+         </div>
+       {% elseif theme.hypercomments_id %}
+         <div id="hypercomments_widget"></div>
+       {% elseif theme.gentie_productKey %}
+         <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+       {% elseif theme.youyan_uid %}
+            <div id="uyan_frame"></div>
+       {% endif %}
+     </div>
+   {% endif %}
 
 
 
