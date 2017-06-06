@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/06/05/关于node-js的学习-博客1/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="到了毕业季了,老师们也是有仇报仇有怨报怨,看着哪个不顺心的,使劲卡那个老师的学生毕业.大学教授虽然很多都是桃李芬芳,但总有那么几个没品没德的亲眼到学校参加了一场毕业答辩,背后真是暗流涌动啊.">
-<meta property="og:updated_time" content="2017-06-06T03:12:49.225Z">
+<meta property="og:updated_time" content="2017-06-06T05:45:48.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node.js的学习-博客1">
 <meta name="twitter:description" content="到了毕业季了,老师们也是有仇报仇有怨报怨,看着哪个不顺心的,使劲卡那个老师的学生毕业.大学教授虽然很多都是桃李芬芳,但总有那么几个没品没德的亲眼到学校参加了一场毕业答辩,背后真是暗流涌动啊.">
@@ -268,14 +268,13 @@
 <p>app.use(‘/public’,express.static(__dirname+’/public’))   //设置静态文件托管<br>//如果用户调用的文件是/public开头,则调用后面的方法去处理.</p>
 <p>逻辑:用户发送http请求-&gt;url-&gt;解析路由-&gt;找到匹配的规则-&gt;执行绑定的函数-&gt;返回对应的内容至用户.</p>
 <p>/public -&gt;静态文件 -&gt;直接读取指定目录下的文件-&gt;返回给用户</p>
-<p>动态-&gt;处理业务逻辑,加载模板,解析模板-&gt;返回数据给用户<br>代码如下:<br>var express= require(‘express’); //加载模块<br>var swig=require(‘swig’);//加载模板处理模块<br>var app=express();//创建app应用 等同于node.js http.createServer();</p>
+<p>动态-&gt;处理业务逻辑,加载模板,解析模板-&gt;返回数据给用户<br>代码如下:<br>var express= require(‘express’); //加载模块<br>var swig=require(‘swig’);//加载模板处理模块<br>var mongoose=require(‘mongoose’);//加载数据库模块<br>var app=express();//创建app应用 等同于node.js http.createServer();</p>
 <p>app.use(‘/public’,express.static( __dirname+’/public’))   //设置静态文件托管<br>//如果用户调用的url文件是/public开头,则调用后面的方法去处理.返回其文件</p>
 <p>app.engine(‘html’,swig.renderFile);//定义当前应用所使用的模板引擎<br>//第一个参数:模板引擎的名称,同事也是模板文件的后缀<br>//第二个参数,用于解析处理模板内容的方法</p>
 <p>app.set(‘views’,’./views’);<br>//第一个参数必须是views .第二个参数是目录</p>
 <p>app.set(‘view engine’,’html’);<br>//第一个参数必须是 view engine,第二个参数和app,engine方法中定义的模板引擎名称(第一个参数)必须相同!</p>
 <p>swig.setDefaults({cache:false});</p>
-<p>app.get(‘/‘,function(req,res,next){<br>   // res.send(‘欢迎光临我的博客’)<br>    //读取views目录下的指定文件,并解析返回给客户端<br>    res.render(‘index’);<br>    //第一个参数:表示模板的文件,相当于views目录下的文件index.html.(可以自定义新建这个页面)<br>    //第二个参数:传递给模板使用的数据.<br>})</p>
-<p>app.listen(8081);//监听http请求</p>
+<p>app.get(‘/‘,function(req,res,next){<br>   // res.send(‘欢迎光临我的博客’)<br>    //读取views目录下的指定文件,并解析返回给客户端<br>    res.render(‘index’);<br>    //第一个参数:表示模板的文件,相当于views目录下的文件index.html.(可以自定义新建这个页面)<br>    //第二个参数:传递给模板使用的数据.<br>})<br>mongoose.connect();<br>app.listen(8081);//监听http请求</p>
 
         
         </div>
@@ -286,7 +285,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/05/关于node-js的学习-博客1/" data-id="cj3l4uhcc000ek0g5kq83pbv9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/05/关于node-js的学习-博客1/" data-id="cj3lbvslt000hi4g5gc0yosb5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

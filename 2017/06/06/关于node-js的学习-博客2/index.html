@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.下面进行分模块开发和数据库等操作.">
-<meta property="og:updated_time" content="2017-06-06T03:49:05.335Z">
+<meta property="og:updated_time" content="2017-06-06T06:37:52.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node.js的学习-博客2">
 <meta name="twitter:description" content="前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.下面进行分模块开发和数据库等操作.">
@@ -258,6 +258,7 @@
 <p>模块划分:<br>根据功能进行模块划分:前台模块,后台管理模块,API模块(ajxa调用的一些接口)<br>使用app.use()进行划分<br>app.use(‘/admin’,require(‘./router/admin’));处理后台管理的url<br>app.use(‘/api’,require(‘./router/api’));处理api<br>app.use(‘/‘,require(‘./router/main’));处理前台展示<br> 各js如main.js:<br>var express=require(‘express’);<br>var router=express.Router();//路由模块 ,监听app.js里以/admin开头的url.</p>
 <p>router.get(‘/‘,function(req,res,next){<br>    res.send(‘首页’);<br>});</p>
 <p>module.exports =router; //将路由对象返回出去</p>
+<p>安装数据库:npm(node包管理工具)的使用,第三方node模块的管理工具.<br>开启mongodb数据库<br><a href="https://www/mongodb.com(貌似需要翻墙,请使用蓝灯" target="_blank" rel="external">https://www/mongodb.com(貌似需要翻墙,请使用蓝灯</a>)<br>安装教程需要百度,其中安装里有一个选择custom方便以后查找安装位置.<br>配置操作:<br>mongod –dbpath=数据文件保存路径 –port=27018(端口)<br>可视化工具安装<br><a href="http://blog.csdn.net/wrian_ban/article/details/51085678" target="_blank" rel="external">http://blog.csdn.net/wrian_ban/article/details/51085678</a><br>操作命令<br><a href="http://mongoosejs.com/" target="_blank" rel="external">http://mongoosejs.com/</a><br>第一次链接时候发现network is unreachable时请将localhost换成本机ip.</p>
 
         
         </div>
@@ -268,7 +269,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/" data-id="cj3l4uhch000mk0g59jqvavi4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/" data-id="cj3lbvslw000mi4g5p0ti5wzx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
