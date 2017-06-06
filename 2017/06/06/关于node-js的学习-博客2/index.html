@@ -3,14 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: github | Iscol&#39;s Blog</title>
+    <title>关于node.js的学习-博客2 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Iscol&#39;s Blog">
-<meta property="og:url" content="https://iscol.github.io/tags/github/index.html">
+    <meta name="description" content="前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.下面进行分模块开发和数据库等操作.">
+<meta name="keywords" content="node.js博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于node.js的学习-博客2">
+<meta property="og:url" content="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
+<meta property="og:description" content="前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.下面进行分模块开发和数据库等操作.">
+<meta property="og:updated_time" content="2017-06-06T03:49:05.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iscol&#39;s Blog">
+<meta name="twitter:title" content="关于node.js的学习-博客2">
+<meta name="twitter:description" content="前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.下面进行分模块开发和数据库等操作.">
     
 
     
@@ -205,50 +210,173 @@
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#github</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-关于node-js的学习-博客2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/24/我的第一篇博客/">我的第一篇博客</a>
+        <h1 class="article-title" itemprop="name">
+            关于node.js的学习-博客2
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/05/24/我的第一篇博客/">
-            <time datetime="2017-05-24T06:06:40.000Z" itemprop="datePublished">2017-05-24</time>
+        <a href="/2017/06/06/关于node-js的学习-博客2/">
+            <time datetime="2017-06-06T03:11:25.000Z" itemprop="datePublished">2017-06-06</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/github/">github</a>
+        <a class="tag-link" href="/tags/node-js博客/">node.js博客</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>前期的初始化及基本路由的配置已经完成,主要是内容是模板的初始化设定.<br>下面进行分模块开发和数据库等操作.</p>
+<a id="more"></a>
+<p>模块划分:<br>根据功能进行模块划分:前台模块,后台管理模块,API模块(ajxa调用的一些接口)<br>使用app.use()进行划分<br>app.use(‘/admin’,require(‘./router/admin’));处理后台管理的url<br>app.use(‘/api’,require(‘./router/api’));处理api<br>app.use(‘/‘,require(‘./router/main’));处理前台展示<br> 各js如main.js:<br>var express=require(‘express’);<br>var router=express.Router();//路由模块 ,监听app.js里以/admin开头的url.</p>
+<p>router.get(‘/‘,function(req,res,next){<br>    res.send(‘首页’);<br>});</p>
+<p>module.exports =router; //将路由对象返回出去</p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/" data-id="cj3l4uhch000mk0g59jqvavi4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/#comments" class="article-comment-link">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/06/06/生活-电影喜剧之王/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    生活-电影喜剧之王
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/06/05/关于node-js的学习-博客1/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">关于node.js的学习-博客1</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="uyan_frame"></div>
+
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
