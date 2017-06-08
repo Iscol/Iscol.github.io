@@ -153,7 +153,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                13
+                14
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -206,6 +206,139 @@
 
             
             <section id="main">
+    <article id="post-关于node-js的学习-博客4" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/06/08/关于node-js的学习-博客4/">关于node-js的学习-博客4</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/06/08/关于node-js的学习-博客4/">
+            <time datetime="2017-06-08T02:20:04.000Z" itemprop="datePublished">2017-06-08</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/node-js博客/">node.js博客</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>不知道是不是我太菜了,还是github太敏感了,网站崩了一上午了,找了许多原因<br>查看了很多的网站,终于找到了一些问题<br>先贴hexo的网站<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a><br>然后是问题:<br>$ hexo g//命令<br>INFO  Start processing<br>ERROR Theme config load failed.<br>ERROR Process failed: _config.yml<br>YAMLException: bad indentation of a mapping entry at line 73, column 5:</p>
+<pre><code>- hexo-generator-feed
+</code></pre><p>报错!对!就是最下面的这个 - hexo-generator-feed  我也看不懂啥意思,找了半天理由,于是我机制的去官网<br>档了一份原来的,一对比,这是多出来的,之前我还在怀疑空格的问题,<br>原来这不是亲生的!删!痛快华丽丽的删了,然后瞬间正常.<br>简直不要太脆弱.<br>赶紧继续今天的学习!<br>记录下mongodb的开启方式,省的又忘记了<br>首先要找到mongodb的路径D:\mongodb\bin<br>cmd要跳到指定路径下,后启动<br>mongod –dbpath=E:\Blog2\db –port=27018<br></p>
+            <p class="article-more-link">
+                <a href="/2017/06/08/关于node-js的学习-博客4/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://iscol.github.io/2017/06/08/关于node-js的学习-博客4/" data-id="cj3o5iea3000ossg5g3k4g3y4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-关于node-js的学习-博客3" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -261,7 +394,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/" data-id="cj3nsmcxq000pxsg5h3ib9urf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/" data-id="cj3o5ieaf000zssg5n1ygwza2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -392,7 +525,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/06/生活-电影喜剧之王/" data-id="cj3nsmcxv000uxsg5wvx733m9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/06/生活-电影喜剧之王/" data-id="cj3o5ieaa000vssg52f6s4dlp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -523,7 +656,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/" data-id="cj3nsmcxj000hxsg50b3c8sr9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/06/关于node-js的学习-博客2/" data-id="cj3o5ie9x000gssg55koerkry" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -654,7 +787,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/05/关于node-js的学习-博客1/" data-id="cj3nsmcxg000exsg5xtkyytwl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/05/关于node-js的学习-博客1/" data-id="cj3o5iea0000lssg5x537iygh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -785,7 +918,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/01/网站页面优化/" data-id="cj3nsmcxy000wxsg5h284m0cu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/01/网站页面优化/" data-id="cj3o5ieai0012ssg5twyouoy3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -916,7 +1049,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/" data-id="cj3nsmcxc000axsg504gjb6jp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/01/关于node-js的学习-6/" data-id="cj3o5ie9u000dssg54jtigdds" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1047,7 +1180,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/05/31/关于node-js的学习-5/" data-id="cj3nsmcxb0009xsg540s166pr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/05/31/关于node-js的学习-5/" data-id="cj3o5ie9q0009ssg5r5iyiueu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1178,7 +1311,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/05/31/关于node-js的学习-4/" data-id="cj3nsmcx80008xsg5s6qh4spn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/05/31/关于node-js的学习-4/" data-id="cj3o5ie9m0008ssg5pob3nkll" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1309,138 +1442,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/05/27/关于node-js的学习-3/" data-id="cj3nsmcy2000zxsg5btz9j6a8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-关于node-js的学习-2" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/05/26/关于node-js的学习-2/">关于node.js的学习-2</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/26/关于node-js的学习-2/">
-            <time datetime="2017-05-26T00:35:37.000Z" itemprop="datePublished">2017-05-26</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>小张来打卡了,这是第二天了,忙活了一上午的数据库,总算成功的导入了.<br>现在可以沉下心来接着看了<br>昨天学习了一些基础的知识,主要还是require和exports的机制.<br>今天努努力开始继续学习吧.<br>ready  go!</p></p>
-            <p class="article-more-link">
-                <a href="/2017/05/26/关于node-js的学习-2/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://iscol.github.io/2017/05/26/关于node-js的学习-2/" data-id="cj3nsmcwz0004xsg5k6tqsh3v" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/05/27/关于node-js的学习-3/" data-id="cj3o5ie990002ssg5icmm4d2s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1532,6 +1534,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/06/08/关于node-js的学习-博客4/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a></p>
+                            <p class="item-title"><a href="/2017/06/08/关于node-js的学习-博客4/" class="title">关于node-js的学习-博客4</a></p>
+                            <p class="item-date"><time datetime="2017-06-08T02:20:04.000Z" itemprop="datePublished">2017-06-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/06/07/关于node-js的学习-博客3/" class="thumbnail">
     
     
@@ -1605,25 +1626,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/06/01/网站页面优化/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端面试题/">前端面试题</a></p>
-                            <p class="item-title"><a href="/2017/06/01/网站页面优化/" class="title">网站页面优化</a></p>
-                            <p class="item-date"><time datetime="2017-06-01T01:16:40.000Z" itemprop="datePublished">2017-06-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1633,7 +1635,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1642,7 +1644,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -1651,7 +1653,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 

@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="本章设计到用户前端页面逻辑设计等主要的内容是router路由的学习话不多说action~">
-<meta property="og:updated_time" content="2017-06-08T00:36:49.246Z">
+<meta property="og:updated_time" content="2017-06-08T02:20:36.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node.js的学习-博客3">
 <meta name="twitter:description" content="本章设计到用户前端页面逻辑设计等主要的内容是router路由的学习话不多说action~">
@@ -158,7 +158,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                13
+                14
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -255,12 +255,14 @@
             
             <p>本章设计到用户前端页面逻辑设计等<br>主要的内容是router路由的学习<br>话不多说action~</p>
 <a id="more"></a>
-<p>概念链接:<a href="http://www.cnblogs.com/zapple/p/5683016.html" target="_blank" rel="external">http://www.cnblogs.com/zapple/p/5683016.html</a><br>一:模块依赖,例如<br>二:配置和中间件<br>中间件:Express里有个中间件（middleware）的概念。所谓中间件，就是在收到请求后和发送响应之前这个阶段执行的一些函数。<br>中间件其实就是一个访问express应用串入的req，res，nex参数的函数，这个函数可以访问任何通过req，res传入的资源。<br>要在一条路由的处理链上插入中间件，可以使用express对象的use方法。该方法原型如下：</p>
+<p>概念链接:<a href="http://www.cnblogs.com/zapple/p/5683016.html" target="_blank" rel="external">http://www.cnblogs.com/zapple/p/5683016.html</a><br>一:模块依赖,例如<br>var express = require(‘express’),<br>    http = require(‘http’),<br>    path = require(‘path’),<br>    mongoose = require(‘mongoose’),<br>    hash = require(‘./pass’).hash;<br>var app = express()</p>
+<p>二:配置和中间件<br>中间件:Express里有个中间件（middleware）的概念。所谓中间件，就是在收到请求后和发送响应之前这个阶段执行的一些函数。<br>中间件其实就是一个访问express应用串入的req，res，nex参数的函数，这个函数可以访问任何通过req，res传入的资源。<br>要在一条路由的处理链上插入中间件，可以使用express对象的use方法。该方法原型如下：</p>
 <p>app.use([path,] function [, function…])<br>当app.use没有提供path参数时，路径默认为“/”。当你为某个路径安装了中间件，则当以该路径为基础的路径被访问时，都会应用该中间件。<br>比如你为“/abcd”设置了中间件，那么“/abcd/xxx”被访问时也会应用该中间件。<br>中间件函数的原型如下：</p>
 <p>function (req, res, next)<br>第一个参数是Request对象req。第二个参数是Response对象res。第三个则是用来驱动中间件调用链的函数next，如果你想让后面的中间件继续处理请求，就需要调用next方法。<br>给某个路径应用中间件函数的典型调用是这样的：<br>app.use(‘/abcd’, function (req, res, next) {<br>  console.log(req.baseUrl);<br>  next();<br>})</p>
-<p>Express提供了一个static中间件，可以用来处理网站里的静态文件的GET请求，可以通过express.static访问。<br>express.static的用法如下：<br>express.static(root, [options])<br>第一个参数root，是要处理的静态资源的根目录，可以是绝对路径，也可以是相对路径。第二个可选参数用来指定一些选项，比如maxAge、lastModified等<br>//var options = {<br>//dotfiles: ‘ignore’,<br>//etag: false,<br>//extensions: [‘htm’, ‘html’],<br>//index: false,<br>//maxAge: ‘1d’,<br>//redirect: false,<br>//setHeaders: function (res, path, stat) {<br>//  res.set(‘x-timestamp’, Date.now());<br>//}<br>//}<br>//app.use(express.static(‘public’, options));<br>上面这段代码将当前路径下的public目录作为静态文件，并且为Cache-Control头部的max-age选项为1天。<br>还有其它一些属性，请对照express.static的文档来理解。<br>使用express创建的HelloExpress项目的app.js文件里有这样一行代码：<br>app.use(express.static(path.join(_dirname, ‘public’)));<br>这行代码将HelloExpress目录下的public目录作为静态文件交给static中间件来处理，对应的HTTP URI为“/”。<br>path是一个Node.js模块，_dirname是Node.js的全局变量，指向当前运行的js脚本所在的目录。path.join()则用来拼接目录。</p>
+<p>Express提供了一个static中间件，可以用来处理网站里的静态文件的GET请求，可以通过express.static访问。<br>express.static的用法如下：<br>express.static(root, [options])<br>第一个参数root，是要处理的静态资源的根目录，可以是绝对路径，也可以是相对路径。第二个可选参数用来指定一些选项，比如maxAge、lastModified等<br>var options = {<br>  dotfiles: ‘ignore’,<br>  etag: false,<br>  extensions: [‘htm’, ‘html’],<br>  index: false,<br>  maxAge: ‘1d’,<br>  redirect: false,<br>  setHeaders: function (res, path, stat) {<br>    res.set(‘x-timestamp’, Date.now());<br>  }<br>}<br>app.use(express.static(‘public’, options));<br>上面这段代码将当前路径下的public目录作为静态文件，并且为Cache-Control头部的max-age选项为1天。<br>还有其它一些属性，请对照express.static的文档来理解。<br>使用express创建的HelloExpress项目的app.js文件里有这样一行代码：<br>app.use(express.static(path.join(_dirname, ‘public’)));<br>这行代码将HelloExpress目录下的public目录作为静态文件交给static中间件来处理，对应的HTTP URI为“/”。<br>path是一个Node.js模块，_dirname是Node.js的全局变量，指向当前运行的js脚本所在的目录。path.join()则用来拼接目录。</p>
 <p>router<br>Express还提供了一个叫做Router的对象，行为很像中间件，你可以把Router直接传递给app.use，像使用中间件那样使用Router。<br>另外你还可以使用router来处理针对GET、POST等的路由，也可以用它来添加中间件，总之你可以将Router看作一个微缩版的app。</p>
-<p>//var express = require(‘express’);<br>//var router = express.Router();<br>//<br>///<em> GET home page. </em>/<br>//router.get(‘/‘, function(req, res, next) {<br>//res.render(‘index’, { title: ‘Express’ });<br>//});<br>//module.exports = router;<br>index.js创建了一个Router实例，然后调用router.get为“/”路径应用了路由函数。最后呢使用module.exports将Router对象导出。<br>下面是app.js里引用到index.js的代码：<br>var routes = require(‘./routes/index’);<br>…<br>app.use(‘/‘, routes);<br>第一处，require(‘./routes/index’)将其作为模块使用，这行代码导入了index.js，并且将index.js导出的router对象保存在变量routes里以供后续使用。<br>注意，上面代码里的routes就是index.js里的router。<br>第二处代码，把routes作为一个中间件，挂载到了“/”路径上。</p>
+<p>var express = require(‘express’);<br>var router = express.Router();</p>
+<p>/<em> GET home page. </em>/<br>router.get(‘/‘, function(req, res, next) {<br>  res.render(‘index’, { title: ‘Express’ });<br>});<br>module.exports = router;<br>index.js创建了一个Router实例，然后调用router.get为“/”路径应用了路由函数。最后呢使用module.exports将Router对象导出。<br>下面是app.js里引用到index.js的代码：<br>var routes = require(‘./routes/index’);<br>…<br>app.use(‘/‘, routes);<br>第一处，require(‘./routes/index’)将其作为模块使用，这行代码导入了index.js，并且将index.js导出的router对象保存在变量routes里以供后续使用。<br>注意，上面代码里的routes就是index.js里的router。<br>第二处代码，把routes作为一个中间件，挂载到了“/”路径上。</p>
 
         
         </div>
@@ -271,7 +273,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/" data-id="cj3nsmcxq000pxsg5h3ib9urf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/" data-id="cj3o5ieaf000zssg5n1ygwza2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -346,6 +348,15 @@
         
 <nav id="article-nav">
     
+        <a href="/2017/06/08/关于node-js的学习-博客4/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    关于node-js的学习-博客4
+                
+            </div>
+        </a>
+    
     
         <a href="/2017/06/06/生活-电影喜剧之王/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
@@ -373,6 +384,25 @@
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/06/08/关于node-js的学习-博客4/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Node-js/">Node.js</a></p>
+                            <p class="item-title"><a href="/2017/06/08/关于node-js的学习-博客4/" class="title">关于node-js的学习-博客4</a></p>
+                            <p class="item-date"><time datetime="2017-06-08T02:20:04.000Z" itemprop="datePublished">2017-06-08</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -450,25 +480,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/06/01/网站页面优化/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端面试题/">前端面试题</a></p>
-                            <p class="item-title"><a href="/2017/06/01/网站页面优化/" class="title">网站页面优化</a></p>
-                            <p class="item-date"><time datetime="2017-06-01T01:16:40.000Z" itemprop="datePublished">2017-06-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -478,7 +489,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -487,7 +498,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -496,7 +507,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
