@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/06/08/关于node-js的学习-博客4/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="不知道是不是我太菜了,还是github太敏感了,网站崩了一上午了,找了许多原因查看了很多的网站,终于找到了一些问题先贴hexo的网站https://hexo.io/themes/然后是问题:$ hexo g//命令INFO  Start processingERROR Theme config load failed.ERROR Process failed: _config.ymlYAMLExc">
-<meta property="og:updated_time" content="2017-06-08T03:20:36.565Z">
+<meta property="og:updated_time" content="2017-06-12T00:39:51.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node-js的学习-博客4">
 <meta name="twitter:description" content="不知道是不是我太菜了,还是github太敏感了,网站崩了一上午了,找了许多原因查看了很多的网站,终于找到了一些问题先贴hexo的网站https://hexo.io/themes/然后是问题:$ hexo g//命令INFO  Start processingERROR Theme config load failed.ERROR Process failed: _config.ymlYAMLExc">
@@ -254,8 +254,11 @@
         
             
             <p>不知道是不是我太菜了,还是github太敏感了,网站崩了一上午了,找了许多原因<br>查看了很多的网站,终于找到了一些问题<br>先贴hexo的网站<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a><br>然后是问题:<br>$ hexo g//命令<br>INFO  Start processing<br>ERROR Theme config load failed.<br>ERROR Process failed: _config.yml<br>YAMLException: bad indentation of a mapping entry at line 73, column 5:</p>
-<pre><code>- hexo-generator-feed
-</code></pre><p>报错!对!就是最下面的这个 - hexo-generator-feed  我也看不懂啥意思,找了半天理由,于是我机制的去官网<br>档了一份原来的,一对比,这是多出来的,之前我还在怀疑空格的问题,<br>原来这不是亲生的!删!痛快华丽丽的删了,然后瞬间正常.<br>简直不要太脆弱.<br>赶紧继续今天的学习!<br>记录下mongodb的开启方式,省的又忘记了<br>首先要找到mongodb的路径D:\mongodb\bin<br>cmd要跳到指定路径下,后启动<br>mongod –dbpath=E:\Blog2\db –port=27018<br><a id="more"></a></p>
+<ul>
+<li>hexo-generator-feed<br>报错!对!就是最下面的这个 - hexo-generator-feed  我也看不懂啥意思,找了半天理由,于是我机制的去官网<br>档了一份原来的,一对比,这是多出来的,之前我还在怀疑空格的问题,<br>原来这不是亲生的!删!痛快华丽丽的删了,然后瞬间正常.<br>简直不要太脆弱.<br>赶紧继续今天的学习!<br>记录下mongodb的开启方式,省的又忘记了<br>首先要找到mongodb的路径D:\mongodb\bin<br>cmd要跳到指定路径下,后启动<br>mongod –dbpath=E:\Blog2\db –port=27018<a id="more"></a>
+如果git提交不上多数是因为敏感词<br>在模板语法两边用 进行注释即可 ESC下面的键</li>
+</ul>
+<p>//<code>&amp;#123% extends &#39;layout.html&#39;%}</code> 继承模板页进行渲染,实现模块复用<br>//layout页面复用<br>//<div class="container-fluid"><br>// <code>&amp;#123% block maini %}&amp;#123% endblock %}</code><br>//</div><br>//index页面<br>//<code>&amp;#123% extends &#39;layout.html&#39;%}</code><br>//<code>&amp;#123% block maini%}</code><br>//<div class="jumbotron"><br>//  <h1>Hello, &amp;#123&amp;#123userInfo.username}}!</h1><br>//  <p>欢迎进入管理</p><br>//</div><br>//<code>&amp;#123% endblock%}</code><br>//<br>//maini.js<br>//进行渲染 res.render(‘mainm/index’,&amp;#123<br>//      userInfo:req.userInfo  //全局路由均可访问<br>//});<br>//index.html可以进行判断语法<br>//<code>&amp;#123%if userInfo.isAdmin%}</code><br>//<div><br>//<code>&amp;#123%else%}</code><br>//<div><br>//<code>&amp;#123%endif%}</code><br>//<div><br>//<br>//tr&gt;th*4 按table键会重新加载样式<br>// User.find().limit(2).then(function()&amp;#123})//limit()限制条数<br>// <code>&amp;#123% extends &#39;layout.html&#39;%}和 &amp;#123%include &#39;page.html&#39;%}</code>有什么区别吗?<br>// layout是最大的包裹层<br>// 子页面通过extend来继承父页面的html,页面变量不会继承<br>// include同级引入一段页面,可以继承数据,需要通过js路由进行调用.</div></div></div></p>
 
         
         </div>
@@ -266,7 +269,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/08/关于node-js的学习-博客4/" data-id="cj3o5iea3000ossg5g3k4g3y4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/08/关于node-js的学习-博客4/" data-id="cj3pmet17000w7og547r0z9i3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
