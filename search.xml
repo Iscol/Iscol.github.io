@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[仿头条表格类型设计]]></title>
     <url>%2F2017%2F06%2F12%2F%E4%BB%BF%E5%A4%B4%E6%9D%A1%E8%A1%A8%E6%A0%BC%E7%B1%BB%E5%9E%8B-C%E8%AE%BE%E8%AE%A1%2F</url>
-    <content type="text"><![CDATA[捯饬了一天的菜单悬浮效果代码如下http://oqfuveidu.bkt.clouddn.com/index.htmlhttp://oqfuveidu.bkt.clouddn.com/migrate.js]]></content>
+    <content type="text"><![CDATA[捯饬了一天的菜单悬浮效果代码如下原链接:http://www.cnblogs.com/sorex/archive/2011/06/30/2093499.html修改后因js无法加载所以无法显示,可以下载源码后本地显示http://oqfuveidu.bkt.clouddn.com/index.htmlhttp://oqfuveidu.bkt.clouddn.com/migrate.js宽度修改在 $(“#MyTable_tableFixClone”).html(str); 后面加上宽度如: $(“#MyTable_tableFixClone”).html(str).width(14*100);]]></content>
       <categories>
         <category>jQuery导航菜单特效</category>
       </categories>
@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[关于node-js的学习-博客5]]></title>
     <url>%2F2017%2F06%2F12%2F%E5%85%B3%E4%BA%8Enode-js%E7%9A%84%E5%AD%A6%E4%B9%A0-%E5%8D%9A%E5%AE%A25%2F</url>
-    <content type="text"><![CDATA[没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟 -~尴尬]]></content>
+    <content type="text"><![CDATA[没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬]]></content>
       <categories>
         <category>Node.js</category>
       </categories>
