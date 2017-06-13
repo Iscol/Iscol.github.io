@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[关于node-js的学习-博客5]]></title>
     <url>%2F2017%2F06%2F12%2F%E5%85%B3%E4%BA%8Enode-js%E7%9A%84%E5%AD%A6%E4%B9%A0-%E5%8D%9A%E5%AE%A25%2F</url>
-    <content type="text"><![CDATA[没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬]]></content>
+    <content type="text"><![CDATA[没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬小步骤首先往路由里添加router.get路径,然后进行渲染res,render;然后添加对应的html界面,引用bootstrap模板;当然有新的分类时要进行schemas添加,然后再对model进行添加最后再对数据库进行操作处理,findOne().then(function(){})最后再对操作成功后的提示界面进行渲染,增加响应的界面及返回链接.////////////////////////Promise解读]]></content>
       <categories>
         <category>Node.js</category>
       </categories>
