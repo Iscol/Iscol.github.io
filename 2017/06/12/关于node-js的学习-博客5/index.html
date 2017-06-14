@@ -5,17 +5,17 @@
     
     <title>关于node-js的学习-博客5 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬">
+    <meta name="description" content="Promise解读Mongodb中的populate方法findOne没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟">
 <meta name="keywords" content="node.js博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于node-js的学习-博客5">
 <meta property="og:url" content="https://iscol.github.io/2017/06/12/关于node-js的学习-博客5/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
-<meta property="og:description" content="没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬">
-<meta property="og:updated_time" content="2017-06-13T06:57:02.415Z">
+<meta property="og:description" content="Promise解读Mongodb中的populate方法findOne没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟">
+<meta property="og:updated_time" content="2017-06-14T08:06:05.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于node-js的学习-博客5">
-<meta name="twitter:description" content="没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟尴尬">
+<meta name="twitter:description" content="Promise解读Mongodb中的populate方法findOne没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲一翻开上次的内容简直乱糟糟">
     
 
     
@@ -253,7 +253,9 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲<br>一翻开上次的内容简直乱糟糟<br>尴尬<br><a id="more"></a><br>小步骤<br>首先往路由里添加router.get路径,然后进行渲染res,render;<br>然后添加对应的html界面,引用bootstrap模板;<br>当然有新的分类时要进行schemas添加,然后再对model进行添加<br>最后再对数据库进行操作处理,findOne().then(function(){})<br>最后再对操作成功后的提示界面进行渲染,增加响应的界面及返回链接.<br>////////////////////////<br>Promise解读</p>
+            <p>Promise解读<br>Mongodb中的populate方法<br>findOne<br>没啥事千万不要把代码往上放,敏感到直接需要转义,这样真的很费劲<br>一翻开上次的内容简直乱糟糟<br><a id="more"></a><br>小步骤<br>首先往路由里添加router.get路径,然后进行渲染res,render;<br>然后添加对应的html界面,引用bootstrap模板;<br>当然有新的分类时要进行schemas添加,然后再对model进行添加<br>最后再对数据库进行操作处理,findOne().then(function(){})<br>最后再对操作成功后的提示界面进行渲染,增加响应的界面及返回链接.<br>////////////////////////<br>Promise解读<br>ES6引入Promise<br>原文链接:<a href="http://www.jianshu.com/p/87183851756f" target="_blank" rel="external">http://www.jianshu.com/p/87183851756f</a><br>简要分析如下:<br>PromiseStatus：用于记录Promise对象的三种状态，这三中状态分别是：<br>pending：待定状态，Promise对象刚被初始化的状态<br>fulfilled：完成状态，承诺被完成了的状态<br>rejected：拒绝状态，承诺完成失败的状态<br>Promise的初始状态是pending。随后会更具承诺完成的情况更改PromiseStatus的值。<br>PromiseStatus：用于记录返回的数据或者错误。<br>当承诺完成时，会把返回的数据赋给PromiseStatus。如果承诺执行失败了，那么失败的原因也会赋给此变量。<br>resolve()和reject()：Promise构造函数中有两个闭包的函数resolve()和reject()。<br>在new一个新的Promise的时候会传递一件你需要做的事情（executor）。这个executor是一个函数，<br>在Promise的构造函数中它会被传入两个参数，这两个参数即我们的两个闭包的函数resolve()和reject()，<br>以便你在executor中判定是否完成了你的承诺。</p>
+<p>Mongodb中的populate方法<br> 原文链接:<a href="http://blog.csdn.net/hellochenlu/article/details/50467563" target="_blank" rel="external">http://blog.csdn.net/hellochenlu/article/details/50467563</a><br> 先科普下mongoDB数据库<br> mongoDB是文档型数据库,那么不如SQL这种关系型数据库在操作关联的时候那样方便,于是Popolation方法应用而生.<br> Mongoose是MongoDB的ODM,即将数据库的数据转化为代码对象的库,使用转化后的对象可以直接对数据库的数据进行操作.<br> 在定义Schema的时候，如果设置某个 field 关联另一个Schema，<br> 那么在获取 document 的时候就可以使用 Population 功能通过关联Schema的 field 找到关联的另一个 document，<br> 并且用被关联 document 的内容替换掉原来关联字段(field)的内容。<br> Query.populate(path, [select], [model], [match], [options])<br> path<br>　　类型：String或Object。<br>　　String类型的时， 指定要填充的关联字段，要填充多个关联字段可以以空格分隔。<br>　　Object类型的时，就是把 populate 的参数封装到一个对象里。当然也可以是个数组。下面的例子中将会实现。<br>select<br>　　类型：Object或String，可选，指定填充 document 中的哪些字段。<br>　　Object类型的时，格式如:{name: 1, _id: 0},为0表示不填充，为1时表示填充。<br>　　String类型的时，格式如:”name -_id”，用空格分隔字段，在字段名前加上-表示不填充。详细语法介绍query-select<br>model<br>　　类型：Model，可选，指定关联字段的 model，如果没有指定就会使用Schema的ref。<br>match<br>　　类型：Object，可选，指定附加的查询条件。<br>options<br>　　类型：Object，可选，指定附加的其他查询选项，如排序以及条数限制等等。</p>
+<p>findOne是返回符合条件的第一条记录，然后关闭游标。<br>find返回符合条件的所有记录。</p>
 
         
         </div>
@@ -264,7 +266,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/12/关于node-js的学习-博客5/" data-id="cj3vbl5ej000s0sg5h3w18obg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/06/12/关于node-js的学习-博客5/" data-id="cj3wrorea000kmog5elprninq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
