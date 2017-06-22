@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于JS的学习-1]]></title>
+    <url>%2F2017%2F06%2F19%2F%E5%85%B3%E4%BA%8EJS%E7%9A%84%E5%AD%A6%E4%B9%A0-1%2F</url>
+    <content type="text"><![CDATA[JavaScript 语句标识符JavaScript 语句通常以一个 语句标识符 为开始，并执行该语句。语句标识符是保留关键字不能作为变量名使用。下表列出了 JavaScript 语句标识符 (关键字) ：语句 描述break 用于跳出循环。catch 语句块，在 try 语句块执行出错时执行 catch 语句块。continue 跳过循环中的一个迭代。do … while 执行一个语句块，在条件语句为 true 时继续执行该语句块。for 在条件语句为 true 时，可以将代码块执行指定的次数。for … in 用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。function 定义一个函数if … else 用于基于不同的条件来执行不同的动作。return 退出函数switch 用于基于不同的条件来执行不同的动作。throw 抛出（生成）错误 。try 实现错误处理，与 catch 一同使用。var 声明一个变量。while 当条件语句为 true 时，执行语句块。 声明变量类型当您声明新变量时，可以使用关键词 “new” 来声明其类型：var carname=new String;var x= new Number;var y= new Boolean;var cars= new Array;var person= new Object;]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[flex-box-1]]></title>
     <url>%2F2017%2F06%2F19%2Fflex-box-1%2F</url>
-    <content type="text"><![CDATA[强烈推荐张鑫旭的文章看看,很有意思链接:http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex属性，然后弹性盒子模型简介/ display: box;与display: flex;display:box box-flex 是比较早期的 flex 布局用法吧，标准化里面没有了，display:flex 是标准的下面开始介绍主要内容一: display: flex;声明:.box{ display: flex;}如果是行内元素使用则:.box{ display: inline-flex;} 二:display: box;父标签属性然后子标签按照比例划分box-flex: 2;当然兄弟标签中也可以是固定宽度,则剩下的按照比例划分,当涉及到边框距离时则按照比例划分的标签会缩短自己的大小来满足.1.box-orient:确定子元素的方向,横着还是竖着.horizontal | vertical | inline-axis | block-axis | inherithorizontal与inline-axis(默认)一致,横排vertical与block-axis一致,纵列http://www.zhangxinxu.com/study/201012/css-box-orient-demo.html 2.box-direction:box-direction是用来确定子元素的排列顺序normal | reverse | inheritnormal:表示按照正常顺序排列。所谓正常顺序，就是我们看书写文字的顺序，从左往右，由上至下，先出现的元素，就上面或是左边。reverse:表示反转inherit:继承父元素 3.box-align:box-align与box-pack都是决定盒子内部剩余空间怎么使用的。在行为效果上就是表现为“对齐”.start | end | center | baseline | stretchstretch为默认值，为拉伸，也就是父标签高度过高，其孩子元素的高度就多高 4.box-pack:父标签水平遗留空间的使用start | end | center | justify配合box-direction属性使用其中star为默认属性justify表示两端对齐5.box-lines:决定子元素是可以换行显示single | multiple]]></content>
+    <content type="text"><![CDATA[强烈推荐张鑫旭的文章看看,很有意思链接:http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex属性，然后弹性盒子模型简介/ display: box;与display: flex;display:box box-flex 是比较早期的 flex 布局用法吧，标准化里面没有了，display:flex 是标准的下面开始介绍主要内容一: display: flex;声明:.box{ display: flex;}如果是行内元素使用则:.box{ display: inline-flex;}换行.box{ flex-wrap: nowrap | wrap | wrap-reverse;}项目属性:1 order.item { order: ;}属性定义项目的排列顺序。数值越小，排列越靠前，默认为02 flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。3 flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。4 flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。 浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。5 flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。6 align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。 二:display: box;父标签属性然后子标签按照比例划分box-flex: 2;当然兄弟标签中也可以是固定宽度,则剩下的按照比例划分,当涉及到边框距离时则按照比例划分的标签会缩短自己的大小来满足.1.box-orient:确定子元素的方向,横着还是竖着.horizontal | vertical | inline-axis | block-axis | inherithorizontal与inline-axis(默认)一致,横排vertical与block-axis一致,纵列http://www.zhangxinxu.com/study/201012/css-box-orient-demo.html 2.box-direction:box-direction是用来确定子元素的排列顺序normal | reverse | inheritnormal:表示按照正常顺序排列。所谓正常顺序，就是我们看书写文字的顺序，从左往右，由上至下，先出现的元素，就上面或是左边。reverse:表示反转inherit:继承父元素 3.box-align:box-align与box-pack都是决定盒子内部剩余空间怎么使用的。在行为效果上就是表现为“对齐”.start | end | center | baseline | stretchstretch为默认值，为拉伸，也就是父标签高度过高，其孩子元素的高度就多高 4.box-pack:父标签水平遗留空间的使用start | end | center | justify配合box-direction属性使用其中star为默认属性justify表示两端对齐5.box-lines:决定子元素是可以换行显示single | multiple]]></content>
       <categories>
         <category>flex-box</category>
       </categories>
