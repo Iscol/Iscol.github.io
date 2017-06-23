@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于js的学习-2]]></title>
+    <url>%2F2017%2F06%2F23%2F%E5%85%B3%E4%BA%8Ejs%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
+    <content type="text"><![CDATA[Constructor属性:返回所有javascript变量的构造函数JavaScript 类型转换JavaScript 变量可以转换为新变量或其他数据类型：通过使用 JavaScript 函数通过 JavaScript 自身自动转换toExponential() 把对象的值转换为指数计数法。toFixed(2) 把数字转换为字符串，结果的小数点后有指定位数的数字。例如120.00toPrecision() 把数字格式化为指定的长度。 方法 描述getDate() 从 Date 对象返回一个月中的某一天 (1 ~ 31)。getDay() 从 Date 对象返回一周中的某一天 (0 ~ 6)。getFullYear() 从 Date 对象以四位数字返回年份。getHours() 返回 Date 对象的小时 (0 ~ 23)。getMilliseconds() 返回 Date 对象的毫秒(0 ~ 999)。getMinutes() 返回 Date 对象的分钟 (0 ~ 59)。getMonth() 从 Date 对象返回月份 (0 ~ 11)。getSeconds() 返回 Date 对象的秒数 (0 ~ 59)。getTime() 返回 1970 年 1 月 1 日至今的毫秒数。 方法 描述parseFloat() 解析一个字符串，并返回一个浮点数。parseInt(string, radix) 解析一个字符串，并返回一个整数string 必需。要被解析的字符串。radix可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于JS的学习-1]]></title>
     <url>%2F2017%2F06%2F22%2F%E5%85%B3%E4%BA%8EJS%E7%9A%84%E5%AD%A6%E4%B9%A0-1%2F</url>
     <content type="text"><![CDATA[JavaScript 语句标识符JavaScript 语句通常以一个 语句标识符 为开始，并执行该语句。语句标识符是保留关键字不能作为变量名使用。下表列出了 JavaScript 语句标识符 (关键字) ：语句 描述break 用于跳出循环。catch 语句块，在 try 语句块执行出错时执行 catch 语句块。continue 跳过循环中的一个迭代。do … while 执行一个语句块，在条件语句为 true 时继续执行该语句块。for 在条件语句为 true 时，可以将代码块执行指定的次数。for … in 用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。function 定义一个函数if … else 用于基于不同的条件来执行不同的动作。return 退出函数switch 用于基于不同的条件来执行不同的动作。throw 抛出（生成）错误 。try 实现错误处理，与 catch 一同使用。var 声明一个变量。while 当条件语句为 true 时，执行语句块。 声明变量类型当您声明新变量时，可以使用关键词 “new” 来声明其类型：var carname=new String;var x= new Number;var y= new Boolean;var cars= new Array;var person= new Object; 函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。 JavaScript 变量生命周期JavaScript 变量生命周期在它声明时初始化。局部变量在函数执行完毕后销毁。全局变量在页面关闭后销毁。没有声明就使用的变量，默认为全局变量，不论这个变量在哪被使用。HTML 事件HTML 事件可以是浏览器行为，也可以是用户行为。以下是 HTML 事件的实例：HTML 页面完成加载HTML input 字段改变时HTML 按钮被点击通常，当事件发生时，你可以做些事情。在事件触发时 JavaScript 可以执行一些代码。HTML 元素中可以添加事件属性，使用 JavaScript 代码来添加 HTML 元素。字符串添加转义字符来使用引号转义字符 转义字符的意义\n 回车换行\t 横向跳到下一制表位置\v 竖向跳格\b 退格\r 回车\f 走纸换页\ 反斜线符”\”\’ 单引号符\a 鸣铃对字符串和数字进行加法运算两个数字相加，返回数字相加的和，如果数字与字符串相加，返回字符串，break 语句可用于跳出循环。continue 语句跳出循环后，会继续执行该循环之后的代码（如果有的话）：continue 语句（带有或不带标签引用）只能用在循环中。break 语句（不带标签引用），只能用在循环或 switch 中。通过标签引用，break 语句可用于跳出任何 JavaScript 代码块：NaN 的数据类型是 number数组(Array)的数据类型是 object日期(Date)的数据类型为 objectnull 的数据类型是 object未定义变量的数据类型为 undefined]]></content>
