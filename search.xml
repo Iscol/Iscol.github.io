@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于浏览器兼容性汇总]]></title>
+    <url>%2F2017%2F06%2F26%2F%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E6%B1%87%E6%80%BB%2F</url>
+    <content type="text"><![CDATA[关于浏览器兼容性的问题真的需要慢慢积累,但仍有很多可以总结的地方,将自己遇到的进行汇总.1:强制使360浏览器在打开的时候默认为极速模式! 注意尾缀是/&gt; !]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>浏览器兼容性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于js的学习-3]]></title>
+    <url>%2F2017%2F06%2F26%2F%E5%85%B3%E4%BA%8Ejs%E7%9A%84%E5%AD%A6%E4%B9%A0-3%2F</url>
+    <content type="text"><![CDATA[正则表达式var patt = /runoob/i/runoob/i 是一个正则表达式。runoob 是一个正则表达式主体 (用于检索)。i 是一个修饰符 (搜索不区分大小写)。]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于js的学习-2]]></title>
     <url>%2F2017%2F06%2F23%2F%E5%85%B3%E4%BA%8Ejs%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
     <content type="text"><![CDATA[Constructor属性:返回所有javascript变量的构造函数JavaScript 类型转换JavaScript 变量可以转换为新变量或其他数据类型：通过使用 JavaScript 函数通过 JavaScript 自身自动转换toExponential() 把对象的值转换为指数计数法。toFixed(2) 把数字转换为字符串，结果的小数点后有指定位数的数字。例如120.00toPrecision() 把数字格式化为指定的长度。 方法 描述getDate() 从 Date 对象返回一个月中的某一天 (1 ~ 31)。getDay() 从 Date 对象返回一周中的某一天 (0 ~ 6)。getFullYear() 从 Date 对象以四位数字返回年份。getHours() 返回 Date 对象的小时 (0 ~ 23)。getMilliseconds() 返回 Date 对象的毫秒(0 ~ 999)。getMinutes() 返回 Date 对象的分钟 (0 ~ 59)。getMonth() 从 Date 对象返回月份 (0 ~ 11)。getSeconds() 返回 Date 对象的秒数 (0 ~ 59)。getTime() 返回 1970 年 1 月 1 日至今的毫秒数。 方法 描述parseFloat() 解析一个字符串，并返回一个浮点数。parseInt(string, radix) 解析一个字符串，并返回一个整数string 必需。要被解析的字符串。radix可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。]]></content>
