@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于浏览器兼容性汇总]]></title>
     <url>%2F2017%2F06%2F26%2F%E5%85%B3%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E6%B1%87%E6%80%BB%2F</url>
-    <content type="text"><![CDATA[关于浏览器兼容性的问题真的需要慢慢积累,但仍有很多可以总结的地方,将自己遇到的进行汇总.1:强制使360浏览器在打开的时候默认为极速模式! 注意尾缀是/&gt; !]]></content>
+    <content type="text"><![CDATA[关于浏览器兼容性的问题真的需要慢慢积累,但仍有很多可以总结的地方,将自己遇到的进行汇总.1:强制使360浏览器在打开的时候默认为极速模式!//// // 注意尾缀是/&gt; !]]></content>
       <categories>
         <category>CSS</category>
       </categories>
