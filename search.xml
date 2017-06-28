@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[关于js的学习-3]]></title>
     <url>%2F2017%2F06%2F26%2F%E5%85%B3%E4%BA%8Ejs%E7%9A%84%E5%AD%A6%E4%B9%A0-3%2F</url>
-    <content type="text"><![CDATA[正则表达式var patt = /runoob/i/runoob/i 是一个正则表达式。runoob 是一个正则表达式主体 (用于检索)。i 是一个修饰符 (搜索不区分大小写)。]]></content>
+    <content type="text"><![CDATA[正则表达式var patt = /runoob/i/runoob/i 是一个正则表达式。runoob 是一个正则表达式主体 (用于检索)。i 是一个修饰符 (搜索不区分大小写)。JavaScript 保留关键字 Javascript 的保留关键字不可以用作变量、标签或者函数名。有些保留关键字是作为 Javascript 以后扩展使用。abstract arguments boolean break bytecase catch char class constcontinue debugger default delete dodouble else enum eval exportextends false final finally floatfor function goto if implementsimport in instanceof int interfacelet long native new nullpackage private protected public returnshort static super switch synchronizedthis throw throws transient truetry typeof var void volatilewhile with yield JSON 语法规则 数据为 键/值 对。 数据由逗号分隔。 大括号保存对象 方括号保存数组 点我!]]></content>
       <categories>
         <category>JS</category>
       </categories>
