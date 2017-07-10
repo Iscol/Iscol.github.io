@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>关于node.js的学习-博客3 | Iscol&#39;s Blog</title>
+    <title>关于js的学习-4 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="本章设计到用户前端页面逻辑设计等主要的内容是router路由的学习话不多说action~">
-<meta name="keywords" content="node.js博客">
+    <meta name="description" content="js的小细节">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于node.js的学习-博客3">
-<meta property="og:url" content="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/index.html">
+<meta property="og:title" content="关于js的学习-4">
+<meta property="og:url" content="https://iscol.github.io/2017/07/10/关于js的学习-4/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
-<meta property="og:description" content="本章设计到用户前端页面逻辑设计等主要的内容是router路由的学习话不多说action~">
-<meta property="og:updated_time" content="2017-06-08T02:20:36.629Z">
+<meta property="og:description" content="js的小细节">
+<meta property="og:updated_time" content="2017-07-10T06:45:31.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于node.js的学习-博客3">
-<meta name="twitter:description" content="本章设计到用户前端页面逻辑设计等主要的内容是router路由的学习话不多说action~">
+<meta name="twitter:title" content="关于js的学习-4">
+<meta name="twitter:description" content="js的小细节">
     
 
     
@@ -210,7 +210,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-关于node-js的学习-博客3" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-关于js的学习-4" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -218,7 +218,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            关于node.js的学习-博客3
+            关于js的学习-4
         </h1>
     
 
@@ -227,8 +227,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/06/07/关于node-js的学习-博客3/">
-            <time datetime="2017-06-07T00:49:33.000Z" itemprop="datePublished">2017-06-07</time>
+        <a href="/2017/07/10/关于js的学习-4/">
+            <time datetime="2017-07-10T02:42:30.000Z" itemprop="datePublished">2017-07-10</time>
         </a>
     </div>
 
@@ -236,13 +236,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
+        <a class="article-category-link" href="/categories/JS/">JS</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js博客/">node.js博客</a>
+        <a class="tag-link" href="/tags/js/">js</a>
     </div>
 
                     </div>
@@ -253,16 +253,41 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>本章设计到用户前端页面逻辑设计等<br>主要的内容是router路由的学习<br>话不多说action~</p>
-<a id="more"></a>
-<p>概念链接:<a href="http://www.cnblogs.com/zapple/p/5683016.html" target="_blank" rel="external">http://www.cnblogs.com/zapple/p/5683016.html</a><br>一:模块依赖,例如<br>var express = require(‘express’),<br>    http = require(‘http’),<br>    path = require(‘path’),<br>    mongoose = require(‘mongoose’),<br>    hash = require(‘./pass’).hash;<br>var app = express()</p>
-<p>二:配置和中间件<br>中间件:Express里有个中间件（middleware）的概念。所谓中间件，就是在收到请求后和发送响应之前这个阶段执行的一些函数。<br>中间件其实就是一个访问express应用串入的req，res，nex参数的函数，这个函数可以访问任何通过req，res传入的资源。<br>要在一条路由的处理链上插入中间件，可以使用express对象的use方法。该方法原型如下：</p>
-<p>app.use([path,] function [, function…])<br>当app.use没有提供path参数时，路径默认为“/”。当你为某个路径安装了中间件，则当以该路径为基础的路径被访问时，都会应用该中间件。<br>比如你为“/abcd”设置了中间件，那么“/abcd/xxx”被访问时也会应用该中间件。<br>中间件函数的原型如下：</p>
-<p>function (req, res, next)<br>第一个参数是Request对象req。第二个参数是Response对象res。第三个则是用来驱动中间件调用链的函数next，如果你想让后面的中间件继续处理请求，就需要调用next方法。<br>给某个路径应用中间件函数的典型调用是这样的：<br>app.use(‘/abcd’, function (req, res, next) {<br>  console.log(req.baseUrl);<br>  next();<br>})</p>
-<p>Express提供了一个static中间件，可以用来处理网站里的静态文件的GET请求，可以通过express.static访问。<br>express.static的用法如下：<br>express.static(root, [options])<br>第一个参数root，是要处理的静态资源的根目录，可以是绝对路径，也可以是相对路径。第二个可选参数用来指定一些选项，比如maxAge、lastModified等<br>var options = {<br>  dotfiles: ‘ignore’,<br>  etag: false,<br>  extensions: [‘htm’, ‘html’],<br>  index: false,<br>  maxAge: ‘1d’,<br>  redirect: false,<br>  setHeaders: function (res, path, stat) {<br>    res.set(‘x-timestamp’, Date.now());<br>  }<br>}<br>app.use(express.static(‘public’, options));<br>上面这段代码将当前路径下的public目录作为静态文件，并且为Cache-Control头部的max-age选项为1天。<br>还有其它一些属性，请对照express.static的文档来理解。<br>使用express创建的HelloExpress项目的app.js文件里有这样一行代码：<br>app.use(express.static(path.join(_dirname, ‘public’)));<br>这行代码将HelloExpress目录下的public目录作为静态文件交给static中间件来处理，对应的HTTP URI为“/”。<br>path是一个Node.js模块，_dirname是Node.js的全局变量，指向当前运行的js脚本所在的目录。path.join()则用来拼接目录。</p>
-<p>router<br>Express还提供了一个叫做Router的对象，行为很像中间件，你可以把Router直接传递给app.use，像使用中间件那样使用Router。<br>另外你还可以使用router来处理针对GET、POST等的路由，也可以用它来添加中间件，总之你可以将Router看作一个微缩版的app。</p>
-<p>var express = require(‘express’);<br>var router = express.Router();</p>
-<p>/<em> GET home page. </em>/<br>router.get(‘/‘, function(req, res, next) {<br>  res.render(‘index’, { title: ‘Express’ });<br>});<br>module.exports = router;<br>index.js创建了一个Router实例，然后调用router.get为“/”路径应用了路由函数。最后呢使用module.exports将Router对象导出。<br>下面是app.js里引用到index.js的代码：<br>var routes = require(‘./routes/index’);<br>…<br>app.use(‘/‘, routes);<br>第一处，require(‘./routes/index’)将其作为模块使用，这行代码导入了index.js，并且将index.js导出的router对象保存在变量routes里以供后续使用。<br>注意，上面代码里的routes就是index.js里的router。<br>第二处代码，把routes作为一个中间件，挂载到了“/”路径上。</p>
+            <p>js的小细节<br><a id="more"></a><br>onload 和 onunload 事件会在用户进入或离开页面时被触发。</p>
+<p>onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。</p>
+<p>onload 和 onunload 事件可用于处理 cookie。</p>
+<p>onchange 事件常结合对输入字段的验证来使用。当内容发生变化时会调用这个生成函数进行一些操作.</p>
+<p>addEventListener() 方法用于向指定元素添加事件句柄。</p>
+<p>addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。</p>
+<p>你可以向一个元素添加多个事件句柄。</p>
+<p>你可以向同个元素添加多个同类型的事件句柄，如：两个 “click” 事件。</p>
+<p>你可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。</p>
+<p>addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。</p>
+<p>当你使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。</p>
+<p>你可以使用 removeEventListener() 方法来移除事件的监听。<br>element.addEventListener(event, function, useCapture);</p>
+<p>第一个参数是事件的类型 (如 “click” 或 “mousedown”).</p>
+<p>第二个参数是事件触发后调用的函数。</p>
+<p>第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的。</p>
+<p>当用户重置窗口大小时添加事件监听：<br>//window.addEventListener(“resize”, function(){<br>   // document.getElementById(“demo”).innerHTML = sometext;<br>//});</p>
+<p>事件传递的两种方式:事件冒泡和事件捕获!</p>
+<p>事件冒泡:内部元素优先触发,然后再触发外部元素</p>
+<p>事件捕获:外部元素优先触发.</p>
+<p>语法://document.getElementById(“myDiv”).addEventListener(“click”, myFunction, true);<br>默认为false即冒泡传递.</p>
+<p>找到您希望删除的子元素，然后使用其 parentNode 属性来找到父元素：<br>var child=document.getElementById(“p1”);<br>child.parentNode.removeChild(child);</p>
+<p>//////////////////////////////////////////</p>
+<p>toUpperCase() 将文本转化成大写.toLowerCase();转化小写</p>
+<p>round()<br>四舍五入。Math.round(2.5)</p>
+<p>random()<br>如何使用 random() 来返回 0 到 1 之间的随机数。</p>
+<p>max()<br>如何使用 max() 来返回两个给定的数中的较大的数。（在 ECMASCript v3 之前，该方法只有两个参数。）</p>
+<p>min()<br>如何使用 min() 来返回两个给定的数中的较小的数。（在 ECMASCript v3 之前，该方法只有两个参数。）</p>
+<p>Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 11 之间的随机数：<br>document.write(Math.floor(Math.random()*11));</p>
+<p>实用的 JavaScript 方案（涵盖所有浏览器）：</p>
+<p>确定浏览器窗口的尺寸。<br>var w=window.innerWidth<br>|| document.documentElement.clientWidth<br>|| document.body.clientWidth;</p>
+<p>var h=window.innerHeight<br>|| document.documentElement.clientHeight<br>|| document.body.clientHeight; </p>
+<p>window.screen对象在编写时可以不使用 window 这个前缀。</p>
+<p>一些属性：<br>screen.availWidth - 可用的屏幕宽度<br>screen.availHeight - 可用的屏幕高度</p>
+<p>history.back() - 与在浏览器点击后退按钮相同<br>history.forward() - 与在浏览器中点击按钮向前相同<br>例如: window.history.back();</p>
+<p>确认框 confirm(“sometext”);<br>提示框prompt(“sometext”,”defaultvalue”);</p>
 
         
         </div>
@@ -273,7 +298,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/06/07/关于node-js的学习-博客3/" data-id="cj4xvzoa00013fgg5xtt9vum1" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="https://iscol.github.io/2017/07/10/关于js的学习-4/" data-id="cj4xvzo9v000xfgg55il0afcf" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -348,19 +373,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/06/08/关于node-js的学习-博客4/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Plus récent</strong>
-            <div class="article-nav-title">
-                
-                    关于node-js的学习-博客4
-                
-            </div>
-        </a>
     
-    
-        <a href="/2017/06/06/生活-电影喜剧之王/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/07/06/关于-net的学习/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Plus ancien</strong>
-            <div class="article-nav-title">生活-电影喜剧之王</div>
+            <div class="article-nav-title">关于.net的学习</div>
         </a>
     
 </nav>
