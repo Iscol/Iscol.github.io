@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于.net的学习-2]]></title>
+    <url>%2F2017%2F07%2F11%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
+    <content type="text"><![CDATA[开始学习C#了]]></content>
+      <categories>
+        <category>.net</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于js的学习-4]]></title>
     <url>%2F2017%2F07%2F10%2F%E5%85%B3%E4%BA%8Ejs%E7%9A%84%E5%AD%A6%E4%B9%A0-4%2F</url>
     <content type="text"><![CDATA[js的小细节onload 和 onunload 事件会在用户进入或离开页面时被触发。 onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。 onload 和 onunload 事件可用于处理 cookie。 onchange 事件常结合对输入字段的验证来使用。当内容发生变化时会调用这个生成函数进行一些操作. addEventListener() 方法用于向指定元素添加事件句柄。 addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。 你可以向一个元素添加多个事件句柄。 你可以向同个元素添加多个同类型的事件句柄，如：两个 “click” 事件。 你可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。 addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。 当你使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。 你可以使用 removeEventListener() 方法来移除事件的监听。element.addEventListener(event, function, useCapture); 第一个参数是事件的类型 (如 “click” 或 “mousedown”). 第二个参数是事件触发后调用的函数。 第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的。 当用户重置窗口大小时添加事件监听：//window.addEventListener(“resize”, function(){ // document.getElementById(“demo”).innerHTML = sometext;//}); 事件传递的两种方式:事件冒泡和事件捕获! 事件冒泡:内部元素优先触发,然后再触发外部元素 事件捕获:外部元素优先触发. 语法://document.getElementById(“myDiv”).addEventListener(“click”, myFunction, true);默认为false即冒泡传递. 找到您希望删除的子元素，然后使用其 parentNode 属性来找到父元素：var child=document.getElementById(“p1”);child.parentNode.removeChild(child); ////////////////////////////////////////// toUpperCase() 将文本转化成大写.toLowerCase();转化小写 round()四舍五入。Math.round(2.5) random()如何使用 random() 来返回 0 到 1 之间的随机数。 max()如何使用 max() 来返回两个给定的数中的较大的数。（在 ECMASCript v3 之前，该方法只有两个参数。） min()如何使用 min() 来返回两个给定的数中的较小的数。（在 ECMASCript v3 之前，该方法只有两个参数。） Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 11 之间的随机数：document.write(Math.floor(Math.random()*11)); 实用的 JavaScript 方案（涵盖所有浏览器）： 确定浏览器窗口的尺寸。var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth; var h=window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight; window.screen对象在编写时可以不使用 window 这个前缀。 一些属性：screen.availWidth - 可用的屏幕宽度screen.availHeight - 可用的屏幕高度 history.back() - 与在浏览器点击后退按钮相同history.forward() - 与在浏览器中点击按钮向前相同例如: window.history.back(); 确认框 confirm(“sometext”);提示框prompt(“sometext”,”defaultvalue”);]]></content>
@@ -9,6 +20,17 @@
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于.net的学习]]></title>
+    <url>%2F2017%2F07%2F10%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-1%2F</url>
+    <content type="text"><![CDATA[@item的用法友链http://www.cnblogs.com/lgxlsm/p/5487894.htmlview.bag及view.data的用法友链http://www.cnblogs.com/wintersun/archive/2012/01/21/2328563.html@ 多行代码时需要包含在大括号内{}和每句代码后都需要加分号; @@{ ViewBag.Title = “Index”; ViewBag.Name = “Linq”; ViewBag.IsOk = false; List list = new List() { “11”, “22”, “33”, “44”, “55”, “66” }; ViewBag.Description = “迷失之牙“;}@ 单行代码时不需要分号结束 @@DateTime.Now 名称：@(“欢迎,” + ViewBag.Name) 状态：@(ViewBag.IsOk ? “是” : “否”) @@Linq @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ @:启用}else{ @:停用} @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ 1.启用}else{ 2.停用} @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ 1. 启用 }else{ 2. 停用 } @foreach (var item in list) { @item }@ 所有Razor语法输出的变量都会被HTML编码（HTMLEncode）后输出，如果想里面的HTML标签生效要调用Html.Raw方法 @@ViewBag.Description@Html.Raw(ViewBag.Description) @{ 混合例子 @(ViewBag.Name) foreach (var item in list) { @item } }]]></content>
+      <categories>
+        <category>.net</category>
+      </categories>
+      <tags>
+        <tag>item的语法</tag>
       </tags>
   </entry>
   <entry>
