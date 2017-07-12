@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于.net的学习-2]]></title>
     <url>%2F2017%2F07%2F11%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
-    <content type="text"><![CDATA[开始学习C#了]]></content>
+    <content type="text"><![CDATA[开始学习C#了.net框架C#语言创建应用程序步骤:1.使用C#编写代码2.把代码编译成CIL(通用编程语言),存储在程序集中3.在执行代码中,使用JIT(编译器)将代码编程为本机代码4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序]]></content>
       <categories>
         <category>net</category>
       </categories>
@@ -27,7 +27,7 @@
     <url>%2F2017%2F07%2F10%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-1%2F</url>
     <content type="text"><![CDATA[@item的用法友链http://www.cnblogs.com/lgxlsm/p/5487894.htmlview.bag及view.data的用法友链http://www.cnblogs.com/wintersun/archive/2012/01/21/2328563.html@ 多行代码时需要包含在大括号内{}和每句代码后都需要加分号; @@{ ViewBag.Title = “Index”; ViewBag.Name = “Linq”; ViewBag.IsOk = false; List list = new List() { “11”, “22”, “33”, “44”, “55”, “66” }; ViewBag.Description = “迷失之牙“;}@ 单行代码时不需要分号结束 @@DateTime.Now 名称：@(“欢迎,” + ViewBag.Name) 状态：@(ViewBag.IsOk ? “是” : “否”) @@Linq @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ @:启用}else{ @:停用} @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ 1.启用}else{ 2.停用} @if (ViewBag.IsOk != null &amp;&amp; ViewBag.IsOk){ 1. 启用 }else{ 2. 停用 } @foreach (var item in list) { @item }@ 所有Razor语法输出的变量都会被HTML编码（HTMLEncode）后输出，如果想里面的HTML标签生效要调用Html.Raw方法 @@ViewBag.Description@Html.Raw(ViewBag.Description) @{ 混合例子 @(ViewBag.Name) foreach (var item in list) { @item } }]]></content>
       <categories>
-        <category>.net</category>
+        <category>net</category>
       </categories>
       <tags>
         <tag>item的语法</tag>
