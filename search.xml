@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于.net的学习-2]]></title>
     <url>%2F2017%2F07%2F11%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
-    <content type="text"><![CDATA[开始学习C#了.net框架C#语言创建应用程序步骤:1.使用C#编写代码2.把代码编译成CIL(通用编程语言),存储在程序集中3.在执行代码中,使用JIT(编译器)将代码编程为本机代码4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序]]></content>
+    <content type="text"><![CDATA[开始学习C#了net框架C#语言创建应用程序步骤:1.使用C#编写代码2.把代码编译成CIL(通用编程语言),存储在程序集中3.在执行代码中,使用JIT(编译器)将代码编程为本机代码4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序]]></content>
       <categories>
         <category>net</category>
       </categories>
