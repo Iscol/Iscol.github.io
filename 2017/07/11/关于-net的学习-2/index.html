@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://iscol.github.io/2017/07/11/关于-net的学习-2/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
 <meta property="og:description" content="开始学习C#了net框架C#语言">
-<meta property="og:updated_time" content="2017-07-12T00:53:15.356Z">
+<meta property="og:updated_time" content="2017-07-12T08:22:06.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于.net的学习-2">
 <meta name="twitter:description" content="开始学习C#了net框架C#语言">
@@ -81,7 +81,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -100,10 +100,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'pos',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'kategori',
+            TAGS: 'tag',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -134,7 +134,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
     </div>
 
                 </td>
@@ -154,16 +154,16 @@
             <h2 id="name">张磊</h2>
             <h3 id="title">Web Developer :Vue,HTML5,Jquery</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Qingdao, China</span>
-            <a id="follow" target="_blank" href="https://github.com/Iscol/Iscol.github.io">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/Iscol/Iscol.github.io">IKUTI</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                26
-                <span>posts</span>
+                28
+                <span>pos</span>
             </div>
             <div class="article-info-block">
-                13
-                <span>tags</span>
+                14
+                <span>tag</span>
             </div>
         </div>
         
@@ -253,7 +253,19 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>开始学习C#了<br>net框架<br>C#语言<br><a id="more"></a><br>创建应用程序步骤:<br>1.使用C#编写代码<br>2.把代码编译成CIL(通用编程语言),存储在程序集中<br>3.在执行代码中,使用JIT(编译器)将代码编程为本机代码<br>4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序</p>
+            <p>开始学习C#了<br>net框架<br>C#语言<br><a id="more"></a></p>
+<p>创建应用程序步骤<br> 1.使用C#编写代码<br> 2.把代码编译成CIL(通用编程语言),存储在程序集中<br> 3.在执行代码中,使用JIT(编译器)将代码编程为本机代码<br> 4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序</p>
+<p>.Sln:解决方案文件<br>.csroj:项目文件<br>.cs:类文件<br>命名空间namespace xx:.net中提供应用程序代码容器的方式,这样就可以唯一的标识代码及其内容.<br>关键字namespace 在vs创建控制台应用程序时会自动加入命名空间,以”层”的形势存在,如果有多层以”.”分开</p>
+<p>标识符:只能由大小写字母,数字和下划线组成.必须以字母或者下划线开头.区分大小写.<br>如果C#关键字作为标识符就在前面加上@<br>标识符的命名最好好辨认(可用英文)</p>
+<p>赋值:这是写入内存的一个郭晨,一旦给一个变量新值,那么变量中的老值也就不存在了.</p>
+<p>const double pi = 3.14; //定义常量 const(关键字) 数据类型 常量名=常量值</p>
+<p> 变量的作用域为包含它的大括号!!!</p>
+<p>@作用:<br> 1.Console.Write(@”1111\n”);转义失效会被输出成1111\n<br> 2.字符串跨行,开始加@后换行不需要用+号<br> 3.加入@可以让一些关键字允许成为标识符(类名,变量名等)如@class</p>
+<p>数据类型:<br>值类型:在栈中操作 int a=100;包括数值类型 布尔类型字符类型(保存单个字符的值)<br>引用类型:在堆中分配存储单元 string s=”我要学习”(字符串会对应一个内存地址,然后s存在值类型里指向堆中),对象类型(obj)和字符串类型</p>
+<p>内存原理<br>内存可以划分为三大块<br>堆:<br>栈:<br>静态存储区:存储静态成员</p>
+<p>字符串不可变性:当给一个字符串重新赋值后,老值并没有重新销毁,二手重新开辟了一块空间存储新值.<br>当程序结束后,GC(垃圾收集)扫描整个内存,如果发现有的空间没有被指向,则立即把它销毁.<br>字符串可以看做是char类型的一个只读数组.</p>
+<p> Console.ReadLine();接受用户输入<br> Console.WriteLine(“{0}{1}{2}”, var1, comparison, var2);  //注意参数的设置,对应012<br> //双引号中的内容可以原样输出,但是转移字符集索引号{i}除外.索引号必须从零不间断顺延,否则报错!</p>
+<p>表达式<br>Convert.toDouble()字符类型转换<br>除法运算符:<br>如果5和3都是整数型，相除也是整型，/会把余数去掉;<br>如果5和3都是整数型，相除是double型，/会把余数去掉</p>
 
         
         </div>
@@ -264,7 +276,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/07/11/关于-net的学习-2/" data-id="cj50alh09000a9sg5p565nupk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/07/11/关于-net的学习-2/" data-id="cj51vwkw200063sg5o8nxywed" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -339,9 +351,18 @@
         
 <nav id="article-nav">
     
+        <a href="/2017/07/13/关于-net的学习-3/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Lebih baru</strong>
+            <div class="article-nav-title">
+                
+                    关于.net的学习-3
+                
+            </div>
+        </a>
+    
     
         <a href="/2017/07/10/关于js的学习-4/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Lebih Tua</strong>
             <div class="article-nav-title">关于js的学习-4</div>
         </a>
     
@@ -363,9 +384,47 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">terbaru</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/07/13/便利小工具之获取ip及地址/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/ip定位/">ip定位</a></p>
+                            <p class="item-title"><a href="/2017/07/13/便利小工具之获取ip及地址/" class="title">便利小工具之获取ip及地址</a></p>
+                            <p class="item-date"><time datetime="2017-07-13T03:35:19.000Z" itemprop="datePublished">2017-07-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/07/13/关于-net的学习-3/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/net/">net</a></p>
+                            <p class="item-title"><a href="/2017/07/13/关于-net的学习-3/" class="title">关于.net的学习-3</a></p>
+                            <p class="item-date"><time datetime="2017-07-13T00:16:40.000Z" itemprop="datePublished">2017-07-13</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -424,44 +483,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/07/06/关于-net的学习/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2017/07/06/关于-net的学习/" class="title">关于.net的学习</a></p>
-                            <p class="item-date"><time datetime="2017-07-06T00:40:02.000Z" itemprop="datePublished">2017-07-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/06/26/关于浏览器兼容性汇总/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/CSS/">CSS</a></p>
-                            <p class="item-title"><a href="/2017/06/26/关于浏览器兼容性汇总/" class="title">关于浏览器兼容性汇总</a></p>
-                            <p class="item-date"><time datetime="2017-06-26T05:09:44.000Z" itemprop="datePublished">2017-06-26</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -469,43 +490,43 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">categories</h3>
+        <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/flex-box/">flex-box</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery导航菜单特效/">jQuery导航菜单特效</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/net/">net</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node-js/">Node.js</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/flex-box/">flex-box</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ip定位/">ip定位</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery导航菜单特效/">jQuery导航菜单特效</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/net/">net</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端面试题/">前端面试题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">tag</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL设计技巧/">SQL设计技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel悬浮/">excel悬浮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex-box基础/">flex-box基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/item的语法/">item的语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容性/">浏览器兼容性</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL设计技巧/">SQL设计技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel悬浮/">excel悬浮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex-box基础/">flex-box基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/item的语法/">item的语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js博客/">node.js博客</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/浏览器兼容性/">浏览器兼容性</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/第三方/">第三方</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网页优化/">网页优化</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">awan tag</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/SQL设计技巧/" style="font-size: 10px;">SQL设计技巧</a> <a href="/tags/excel悬浮/" style="font-size: 10px;">excel悬浮</a> <a href="/tags/flex-box基础/" style="font-size: 10px;">flex-box基础</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/item的语法/" style="font-size: 10px;">item的语法</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a> <a href="/tags/node-js博客/" style="font-size: 16.67px;">node.js博客</a> <a href="/tags/浏览器兼容性/" style="font-size: 10px;">浏览器兼容性</a> <a href="/tags/电影/" style="font-size: 10px;">电影</a> <a href="/tags/网页优化/" style="font-size: 10px;">网页优化</a>
+            <a href="/tags/C/" style="font-size: 12.5px;">C#</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/SQL设计技巧/" style="font-size: 10px;">SQL设计技巧</a> <a href="/tags/excel悬浮/" style="font-size: 10px;">excel悬浮</a> <a href="/tags/flex-box基础/" style="font-size: 10px;">flex-box基础</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/item的语法/" style="font-size: 10px;">item的语法</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a> <a href="/tags/node-js博客/" style="font-size: 17.5px;">node.js博客</a> <a href="/tags/浏览器兼容性/" style="font-size: 10px;">浏览器兼容性</a> <a href="/tags/电影/" style="font-size: 10px;">电影</a> <a href="/tags/第三方/" style="font-size: 10px;">第三方</a> <a href="/tags/网页优化/" style="font-size: 10px;">网页优化</a>
         </div>
     </div>
 
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">tautan</h3>
         <div class="widget">
             <ul>
                 

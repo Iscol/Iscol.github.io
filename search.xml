@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[便利小工具之获取ip及地址]]></title>
+    <url>%2F2017%2F07%2F13%2F%E4%BE%BF%E5%88%A9%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8B%E8%8E%B7%E5%8F%96ip%E5%8F%8A%E5%9C%B0%E5%9D%80%2F</url>
+    <content type="text"><![CDATA[获取用户ip及地址的简单第三方插件http://oqfuveidu.bkt.clouddn.com/%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7ip%E5%8F%8A%E5%9C%B0%E5%9D%80.jpg]]></content>
+      <categories>
+        <category>ip定位</category>
+      </categories>
+      <tags>
+        <tag>第三方</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于.net的学习-3]]></title>
+    <url>%2F2017%2F07%2F13%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-3%2F</url>
+    <content type="text"><![CDATA[运算符数学运算符var=var2++ 先用后加,var=var2,var2+1;var=++var2 先加后用 赋值运算符a+=b: a=a+b;a-=b: a=a-b; 关系运算符操作数为数值类型,则比较两个数的大小;操作数是字符类,则比较其unicode编码大小;操作数为两个字符串.则只能用==或者!=.]]></content>
+      <categories>
+        <category>net</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于.net的学习-2]]></title>
     <url>%2F2017%2F07%2F11%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-2%2F</url>
-    <content type="text"><![CDATA[开始学习C#了net框架C#语言创建应用程序步骤:1.使用C#编写代码2.把代码编译成CIL(通用编程语言),存储在程序集中3.在执行代码中,使用JIT(编译器)将代码编程为本机代码4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序]]></content>
+    <content type="text"><![CDATA[开始学习C#了net框架C#语言 创建应用程序步骤 1.使用C#编写代码 2.把代码编译成CIL(通用编程语言),存储在程序集中 3.在执行代码中,使用JIT(编译器)将代码编程为本机代码 4.在托管的CLR(通用语言运行时)环境下运行本机代码,以及其他应用程序 .Sln:解决方案文件.csroj:项目文件.cs:类文件命名空间namespace xx:.net中提供应用程序代码容器的方式,这样就可以唯一的标识代码及其内容.关键字namespace 在vs创建控制台应用程序时会自动加入命名空间,以”层”的形势存在,如果有多层以”.”分开 标识符:只能由大小写字母,数字和下划线组成.必须以字母或者下划线开头.区分大小写.如果C#关键字作为标识符就在前面加上@标识符的命名最好好辨认(可用英文) 赋值:这是写入内存的一个郭晨,一旦给一个变量新值,那么变量中的老值也就不存在了. const double pi = 3.14; //定义常量 const(关键字) 数据类型 常量名=常量值 变量的作用域为包含它的大括号!!! @作用: 1.Console.Write(@”1111\n”);转义失效会被输出成1111\n 2.字符串跨行,开始加@后换行不需要用+号 3.加入@可以让一些关键字允许成为标识符(类名,变量名等)如@class 数据类型:值类型:在栈中操作 int a=100;包括数值类型 布尔类型字符类型(保存单个字符的值)引用类型:在堆中分配存储单元 string s=”我要学习”(字符串会对应一个内存地址,然后s存在值类型里指向堆中),对象类型(obj)和字符串类型 内存原理内存可以划分为三大块堆:栈:静态存储区:存储静态成员 字符串不可变性:当给一个字符串重新赋值后,老值并没有重新销毁,二手重新开辟了一块空间存储新值.当程序结束后,GC(垃圾收集)扫描整个内存,如果发现有的空间没有被指向,则立即把它销毁.字符串可以看做是char类型的一个只读数组. Console.ReadLine();接受用户输入 Console.WriteLine(“{0}{1}{2}”, var1, comparison, var2); //注意参数的设置,对应012 //双引号中的内容可以原样输出,但是转移字符集索引号{i}除外.索引号必须从零不间断顺延,否则报错! 表达式Convert.toDouble()字符类型转换除法运算符:如果5和3都是整数型，相除也是整型，/会把余数去掉;如果5和3都是整数型，相除是double型，/会把余数去掉]]></content>
       <categories>
         <category>net</category>
       </categories>
