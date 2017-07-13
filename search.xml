@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[关于.net的学习-3]]></title>
     <url>%2F2017%2F07%2F13%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-3%2F</url>
-    <content type="text"><![CDATA[运算符数学运算符var=var2++ 先用后加,var=var2,var2+1;var=++var2 先加后用 赋值运算符a+=b: a=a+b;a-=b: a=a-b; 关系运算符操作数为数值类型,则比较两个数的大小;操作数是字符类,则比较其unicode编码大小;操作数为两个字符串.则只能用==或者!=.]]></content>
+    <content type="text"><![CDATA[运算符数学运算符var=var2++ 先用后加,var=var2,var2+1;var=++var2 先加后用 赋值运算符a+=b: a=a+b;a-=b: a=a-b; 关系运算符操作数为数值类型,则比较两个数的大小;操作数是字符类,则比较其unicode编码大小;操作数为两个字符串.则只能用==或者!=. 运算符前一个操作数为true值时,不再计算执行后一个操作数的内容 1字节(byte)=8位(bit) 1K=1024Byte]]></content>
       <categories>
         <category>net</category>
       </categories>
