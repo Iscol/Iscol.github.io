@@ -3,14 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Arsip | Iscol&#39;s Blog</title>
+    <title>关于.net的学习-4 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Iscol&#39;s Blog">
-<meta property="og:url" content="https://iscol.github.io/archives/page/3/index.html">
+    <meta name="description" content="流程控制:分支语句,迭代语句,跳转语句 if switch while">
+<meta name="keywords" content="C#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于.net的学习-4">
+<meta property="og:url" content="https://iscol.github.io/2017/07/14/关于-net的学习-4/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
+<meta property="og:description" content="流程控制:分支语句,迭代语句,跳转语句 if switch while">
+<meta property="og:updated_time" content="2017-07-14T06:20:48.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Iscol&#39;s Blog">
+<meta name="twitter:title" content="关于.net的学习-4">
+<meta name="twitter:description" content="流程控制:分支语句,迭代语句,跳转语句 if switch while">
     
 
     
@@ -205,368 +210,176 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2017</h1>
-            </div>
+            <section id="main"><article id="post-关于-net的学习-4" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/06/05/关于node-js的学习-博客1/">关于node.js的学习-博客1</a>
+        <h1 class="article-title" itemprop="name">
+            关于.net的学习-4
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/06/05/关于node-js的学习-博客1/">
-            <time datetime="2017-06-05T00:50:35.000Z" itemprop="datePublished">2017-06-05</time>
+        <a href="/2017/07/14/关于-net的学习-4/">
+            <time datetime="2017-07-14T00:18:48.000Z" itemprop="datePublished">2017-07-14</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
+        <a class="article-category-link" href="/categories/net/">net</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js博客/">node.js博客</a>
+        <a class="tag-link" href="/tags/C/">C#</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/06/01/网站页面优化/">网站页面优化</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>流程控制:分支语句,迭代语句,跳转语句</p>
+<p>if switch while</p>
+<a id="more"></a>
+<p>switch(表达式){<br>case 常量表达式:条件语句;break;<br>case 常量表达式:条件语句;break;<br>case 常量表达式:条件语句;break;<br>default:条件语句;break;<br>}</p>
+<p>三位运算符:只适用于判断具有两个结果的情况.<br>条件判断表达式?成立时执行的语句:不成立时执行的语句;</p>
+<p>迭代语句:<br>while(条件表达式)<br>{代码语句}</p>
+<p>do..while:<br>do{循环体语句}while(判断语句)</p>
+<p>for(初始条件;判断条件;循环条件){循环语句}</p>
+<p>foreach(类型,变量in集合){代码体}<br>循环变量item是一个只读型的局部变量,这个值如果被修改编译器会发生错误.<br>string(字符串)类型可以看做是char(字符)类型的一个集合.</p>
+<p>char.IsNumber(xx);<br>方    法————-说    明<br>IsControl:    指示指定的Unicode字符是否属于控制字符类别<br>IsDigit:    指示某个Unicode字符是否属于十进制数字类别<br>IsHighSurrogate:    指示指定的Char对象是否为高代理项<br>IsLetter:    指示某个Unicode字符是否属于字母类别<br>IsLetterOrDigit:    指示某个Unicode字符是属于字母类别还是属于十进制数字类别<br>IsLower:    指示某个Unicode字符是否属于小写字母类别<br>IsLowSurrogate:    指示指定的Char对象是否为低代理项<br>IsNumber:    指示某个Unicode字符是否属于数字类别<br>IsPunctuation:    指示某个Unicode字符是否属于标点符号类别<br>IsSeparator:    指示某个Unicode字符是否属于分隔符类别<br>IsSurrogate:    指示某个Unicode字符是否属于代理项字符类别<br>IsSurrogatePair:    指示两个指定的Char对象是否形成代理项对<br>IsSymbol:    指示某个Unicode字符是否属于符号字符类别<br>IsUpper:    指示某个Unicode字符是否属于大写字母类别<br>IsWhiteSpace:    指示某个Unicode字符是否属于空白类别<br>Parse:    将指定字符串的值转换为它的等效Unicode字符<br>ToLower:    将Unicode字符的值转换为它的小写等效项<br>ToLowerInvariant:    使用固定区域性的大小写规则，将Unicode字符的值转换为其小写等效项<br>ToString:    将此实例的值转换为其等效的字符串表示<br>ToUpper:    将Unicode字符的值转换为它的大写等效项<br>ToUpperInvariant:    使用固定区域性的大小写规则，将Unicode字符的值转换为其大写等效项<br>TryParse:    将指定字符串的值转换为它的等效Unicode字符</p>
+<p>跳转语句</p>
+<p>break语句的作用:<br> 1.switch语句中用于从case语句中跳出,结束分支语句.<br> 2.跳出迭代语句,结束当前循环.</p>
+<p>continue语句用于停止本次迭代,并非跳出迭代语句.然后继续返回开始继续进行.(只能用于迭代语句中!)</p>
+<p>return; 定义的时候要写成void没有返回值;<br>return 表达式;return语句只能出现在方法中,当调用方法时,执行到return语句时,直接跳转到Main函数.</p>
+<p>goto标识符:标识程序位置的方法<br>作用:当程序执行到goto语句时,程序会直接跳到标识符所标识的程序位置,继续执行代码.<br> goto error(语句块),error:{}</p>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/06/01/网站页面优化/">
-            <time datetime="2017-06-01T01:16:40.000Z" itemprop="datePublished">2017-06-01</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/前端面试题/">前端面试题</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/网页优化/">网页优化</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/06/01/关于node-js的学习-6/">关于node.js的学习-6</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/06/01/关于node-js的学习-6/">
-            <time datetime="2017-06-01T01:09:45.000Z" itemprop="datePublished">2017-06-01</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/31/关于node-js的学习-5/">关于node.js的学习-5</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/31/关于node-js的学习-5/">
-            <time datetime="2017-05-31T05:31:05.000Z" itemprop="datePublished">2017-05-31</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/31/关于node-js的学习-4/">关于node.js的学习-4</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/31/关于node-js的学习-4/">
-            <time datetime="2017-05-31T00:38:30.000Z" itemprop="datePublished">2017-05-31</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/27/关于node-js的学习-3/">关于node.js的学习-3</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/27/关于node-js的学习-3/">
-            <time datetime="2017-05-27T03:35:56.000Z" itemprop="datePublished">2017-05-27</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/26/关于node-js的学习-2/">关于node.js的学习-2</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/26/关于node-js的学习-2/">
-            <time datetime="2017-05-26T00:35:37.000Z" itemprop="datePublished">2017-05-26</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/25/关于node-js的学习-1/">关于node.js的学习-1</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/25/关于node-js的学习-1/">
-            <time datetime="2017-05-25T02:14:59.000Z" itemprop="datePublished">2017-05-25</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Node-js/">Node.js</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/node-js/">node.js</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/24/我的第一篇博客/">我的第一篇博客</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/24/我的第一篇博客/">
-            <time datetime="2017-05-24T06:06:40.000Z" itemprop="datePublished">2017-05-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/github/">github</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/05/24/hello-world/">Hello World</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/24/hello-world/">
-            <time datetime="2017-05-24T02:38:19.862Z" itemprop="datePublished">2017-05-24</time>
-        </a>
-    </div>
-
-
-                    
-                    
-                </div>
-            </div>
-        </div>
-    
 </div>
 
-    <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Sebelumnya</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+    <a data-url="https://iscol.github.io/2017/07/14/关于-net的学习-4/" data-id="cj53mocoe00063gg59kvn4lrn" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/07/14/关于-net的学习-5/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Lebih baru</strong>
+            <div class="article-nav-title">
+                
+                    关于.net的学习-5
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/07/13/便利小工具之获取ip及地址/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Lebih Tua</strong>
+            <div class="article-nav-title">便利小工具之获取ip及地址</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">

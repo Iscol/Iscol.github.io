@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于.net的学习-5]]></title>
+    <url>%2F2017%2F07%2F14%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-5%2F</url>
+    <content type="text"><![CDATA[字符及转义字符char类结构表示unicode字符char 变量名=’初值’; char.IsNumber(xx);方 法————-说 明IsControl: 指示指定的Unicode字符是否属于控制字符类别IsDigit: 指示某个Unicode字符是否属于十进制数字类别IsHighSurrogate: 指示指定的Char对象是否为高代理项IsLetter: 指示某个Unicode字符是否属于字母类别IsLetterOrDigit: 指示某个Unicode字符是属于字母类别还是属于十进制数字类别IsLower: 指示某个Unicode字符是否属于小写字母类别IsLowSurrogate: 指示指定的Char对象是否为低代理项IsNumber: 指示某个Unicode字符是否属于数字类别IsPunctuation: 指示某个Unicode字符是否属于标点符号类别IsSeparator: 指示某个Unicode字符是否属于分隔符类别IsSurrogate: 指示某个Unichttp://time.qq.com/?pgv_ref=aiotimeode字符是否属于代理项字符类别IsSurrogatePair: 指示两个指定的Char对象是否形成代理项对IsSymbol: 指示某个Unicode字符是否属于符号字符类别IsUpper: 指示某个Unicode字符是否属于大写字母类别IsWhiteSpace: 指示某个Unicode字符是否属于空白类别Parse: 将指定字符串的值转换为它的等效Unicode字符ToLower: 将Unicode字符的值转换为它的小写等效项ToLowerInvariant: 使用固定区域性的大小写规则，将Unicode字符的值转换为其小写等效项ToString: 将此实例的值转换为其等效的字符串表示ToUpper: 将Unicode字符的值转换为它的大写等效项ToUpperInvariant: 使用固定区域性的大小写规则，将Unicode字符的值转换为其大写等效项TryParse: 将指定字符串的值转换为它的等效Unicode字符]]></content>
+      <categories>
+        <category>net</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于.net的学习-4]]></title>
+    <url>%2F2017%2F07%2F14%2F%E5%85%B3%E4%BA%8E-net%E7%9A%84%E5%AD%A6%E4%B9%A0-4%2F</url>
+    <content type="text"><![CDATA[流程控制:分支语句,迭代语句,跳转语句 if switch while switch(表达式){case 常量表达式:条件语句;break;case 常量表达式:条件语句;break;case 常量表达式:条件语句;break;default:条件语句;break;} 三位运算符:只适用于判断具有两个结果的情况.条件判断表达式?成立时执行的语句:不成立时执行的语句; 迭代语句:while(条件表达式){代码语句} do..while:do{循环体语句}while(判断语句) for(初始条件;判断条件;循环条件){循环语句} foreach(类型,变量in集合){代码体}循环变量item是一个只读型的局部变量,这个值如果被修改编译器会发生错误.string(字符串)类型可以看做是char(字符)类型的一个集合. char.IsNumber(xx);方 法————-说 明IsControl: 指示指定的Unicode字符是否属于控制字符类别IsDigit: 指示某个Unicode字符是否属于十进制数字类别IsHighSurrogate: 指示指定的Char对象是否为高代理项IsLetter: 指示某个Unicode字符是否属于字母类别IsLetterOrDigit: 指示某个Unicode字符是属于字母类别还是属于十进制数字类别IsLower: 指示某个Unicode字符是否属于小写字母类别IsLowSurrogate: 指示指定的Char对象是否为低代理项IsNumber: 指示某个Unicode字符是否属于数字类别IsPunctuation: 指示某个Unicode字符是否属于标点符号类别IsSeparator: 指示某个Unicode字符是否属于分隔符类别IsSurrogate: 指示某个Unicode字符是否属于代理项字符类别IsSurrogatePair: 指示两个指定的Char对象是否形成代理项对IsSymbol: 指示某个Unicode字符是否属于符号字符类别IsUpper: 指示某个Unicode字符是否属于大写字母类别IsWhiteSpace: 指示某个Unicode字符是否属于空白类别Parse: 将指定字符串的值转换为它的等效Unicode字符ToLower: 将Unicode字符的值转换为它的小写等效项ToLowerInvariant: 使用固定区域性的大小写规则，将Unicode字符的值转换为其小写等效项ToString: 将此实例的值转换为其等效的字符串表示ToUpper: 将Unicode字符的值转换为它的大写等效项ToUpperInvariant: 使用固定区域性的大小写规则，将Unicode字符的值转换为其大写等效项TryParse: 将指定字符串的值转换为它的等效Unicode字符 跳转语句 break语句的作用: 1.switch语句中用于从case语句中跳出,结束分支语句. 2.跳出迭代语句,结束当前循环. continue语句用于停止本次迭代,并非跳出迭代语句.然后继续返回开始继续进行.(只能用于迭代语句中!) return; 定义的时候要写成void没有返回值;return 表达式;return语句只能出现在方法中,当调用方法时,执行到return语句时,直接跳转到Main函数. goto标识符:标识程序位置的方法作用:当程序执行到goto语句时,程序会直接跳到标识符所标识的程序位置,继续执行代码. goto error(语句块),error:{}]]></content>
+      <categories>
+        <category>net</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[便利小工具之获取ip及地址]]></title>
     <url>%2F2017%2F07%2F13%2F%E4%BE%BF%E5%88%A9%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8B%E8%8E%B7%E5%8F%96ip%E5%8F%8A%E5%9C%B0%E5%9D%80%2F</url>
     <content type="text"><![CDATA[获取用户ip及地址的简单第三方插件]]></content>
