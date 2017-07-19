@@ -5,17 +5,17 @@
     
     <title>关于.net的学习-5 | Iscol&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;">
+    <meta name="description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;string类型变量可以看成是char变量的只读数组!">
 <meta name="keywords" content="C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于.net的学习-5">
 <meta property="og:url" content="https://iscol.github.io/2017/07/14/关于-net的学习-5/index.html">
 <meta property="og:site_name" content="Iscol&#39;s Blog">
-<meta property="og:description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;">
-<meta property="og:updated_time" content="2017-07-18T08:48:43.549Z">
+<meta property="og:description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;string类型变量可以看成是char变量的只读数组!">
+<meta property="og:updated_time" content="2017-07-19T07:32:44.192Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于.net的学习-5">
-<meta name="twitter:description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;">
+<meta name="twitter:description" content="字符及转义字符char类结构表示unicode字符char 变量名=’初值’;string类型变量可以看成是char变量的只读数组!">
     
 
     
@@ -253,8 +253,18 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>字符及转义字符<br>char类结构表示unicode字符<br>char 变量名=’初值’;<br><a id="more"></a></p>
+            <p>字符及转义字符<br>char类结构表示unicode字符<br>char 变量名=’初值’;<br>string类型变量可以看成是char变量的只读数组!<br><a id="more"></a></p>
 <p>char.IsNumber(xx);<br>方    法————-说    明<br>IsControl:    指示指定的Unicode字符是否属于控制字符类别<br>IsDigit:    指示某个Unicode字符是否属于十进制数字类别<br>IsHighSurrogate:    指示指定的Char对象是否为高代理项<br>IsLetter:    指示某个Unicode字符是否属于字母类别<br>IsLetterOrDigit:    指示某个Unicode字符是属于字母类别还是属于十进制数字类别<br>IsLower:    指示某个Unicode字符是否属于小写字母类别<br>IsLowSurrogate:    指示指定的Char对象是否为低代理项<br>IsNumber:    指示某个Unicode字符是否属于数字类别<br>IsPunctuation:    指示某个Unicode字符是否属于标点符号类别<br>IsSeparator:    指示某个Unicode字符是否属于分隔符类别<br>IsSurrogate:    指示某个Unic<a href="http://time.qq.com/?pgv_ref=aiotimeode字符是否属于代理项字符类别" target="_blank" rel="external">http://time.qq.com/?pgv_ref=aiotimeode字符是否属于代理项字符类别</a><br>IsSurrogatePair:    指示两个指定的Char对象是否形成代理项对<br>IsSymbol:    指示某个Unicode字符是否属于符号字符类别<br>IsUpper:    指示某个Unicode字符是否属于大写字母类别<br>IsWhiteSpace:    指示某个Unicode字符是否属于空白类别<br>Parse:    将指定字符串的值转换为它的等效Unicode字符<br>ToLower:    将Unicode字符的值转换为它的小写等效项<br>ToLowerInvariant:    使用固定区域性的大小写规则，将Unicode字符的值转换为其小写等效项<br>ToString:    将此实例的值转换为其等效的字符串表示<br>ToUpper:    将Unicode字符的值转换为它的大写等效项<br>ToUpperInvariant:    使用固定区域性的大小写规则，将Unicode字符的值转换为其大写等效项<br>TryParse:    将指定字符串的值转换为它的等效Unicode字符</p>
+<p>字符串是由零个或多个字符组成的有限序列.string x=”初始值”;</p>
+<p>字符集(charset):是一个系统支持的所有抽象字符的集合</p>
+<p>大小写引用方法的不同!:<br>转换字符串 X.ToUpper();<br>转换字符 char.ToUpper(X);</p>
+<p>字符串比较:<br> 1.==<br> 2.string.Equals(字符串1,字符串2)返回布尔值(string类型名先写上)<br> 3.Compare多个重载 string.<br>Compare(字符串1,字符串2)比较长度,返回数值.<br>Compare(字符串1,字符串2,true)忽略大小写进行比较!<br>字符串1.CompareTo(字符串2)</p>
+<p>字符串格式化:<br>WriteLine(“{0:C}”,123);输出¥123<br>C 适用数字 含义:货币值<br>D 适用证书 含义:一般整数 {0:D3}输入001,002等等<br>P 百分比<br>s=string.Format(‘使用C格式{0:C}\n’,123);</p>
+<p>字符串截取:<br>字符串1.Substring(整数n);<br>将字符串1的前n个长度的字符截取掉,保留后面的字符串.</p>
+<p>字符串1.Substring(整数n,整数m);<br>保留从字符串1第n个长度开始m个长度的字符串</p>
+<p>二者均返回一个新的字符串!</p>
+<p>字符串分割 string[] xx=y.Split(new char[]{‘-‘,’,’})可以多个-,分割!</p>
+<p>字符串合并:<br> 1.+<br> 2.string.Concat(字符串1,字符串1,字符串1);<br> 3.string.Join(“-“(合并后的分隔符),字符串数组);</p>
 
         
         </div>
@@ -265,7 +275,7 @@
 
 </div>
 
-    <a data-url="https://iscol.github.io/2017/07/14/关于-net的学习-5/" data-id="cj59ca7gn00050kg57o88lf98" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://iscol.github.io/2017/07/14/关于-net的学习-5/" data-id="cj5artph1000nfgg5vhzu7is6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
